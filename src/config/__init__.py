@@ -1,6 +1,5 @@
 """
-Configuration module - Azure AI Foundry
-Supports: OpenAI, Embeddings, Cohere Rerank v4.0
+Configuration module - Azure AI Foundry + Qdrant
 """
 import os
 from pathlib import Path
@@ -21,6 +20,12 @@ class Settings(BaseSettings):
     cohere_rerank_deployment: str = "Cohere-rerank-v4.0-fast"
     cohere_rerank_model: str = "Cohere-rerank-v4.0-fast"
     
+    # Qdrant Vector DB
+    qdrant_url: str = ""  # e.g., https://xxx.qdrant.io
+    qdrant_api_key: str = ""
+    qdrant_collection: str = "stock_knowledge"
+    qdrant_vector_size: int = 3072  # text-embedding-3-large
+    
     # Application
     app_name: str = "rag-stock-analyst"
     app_env: str = "development"
@@ -30,11 +35,11 @@ class Settings(BaseSettings):
     # RAG
     rag_chunk_size: int = 500
     rag_chunk_overlap: int = 50
-    rag_top_k: int = 20          # Retrieve more, then rerank
-    rag_top_n: int = 5           # After rerank, keep top N
+    rag_top_k: int = 20
+    rag_top_n: int = 5
     rag_data_dir: str = "./data/raw"
-    rag_vector_store_dir: str = "./data/vector_store"
     rag_use_reranker: bool = True
+    rag_vector_backend: str = "qdrant"  # "qdrant" or "faiss"
     
     # LLM
     llm_temperature: float = 0
