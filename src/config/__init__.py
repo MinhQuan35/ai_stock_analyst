@@ -1,5 +1,5 @@
 """
-Configuration module
+Configuration module - Azure OpenAI via Foundry
 """
 import os
 from pathlib import Path
@@ -9,7 +9,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     """Application settings."""
     
-    # Azure OpenAI
+    # Azure OpenAI (via Foundry)
     azure_openai_api_key: str = ""
     azure_openai_endpoint: str = ""
     azure_openai_api_version: str = "2024-10-21"

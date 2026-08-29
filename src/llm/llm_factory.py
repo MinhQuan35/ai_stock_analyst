@@ -1,5 +1,5 @@
 """
-LLM Factory - Centralized LLM creation
+LLM Factory - Azure OpenAI via Foundry
 """
 from functools import lru_cache
 from langchain_openai import AzureChatOpenAI, AzureOpenAIEmbeddings
@@ -10,7 +10,7 @@ from src.utils import logger
 
 @lru_cache()
 def get_chat_model(temperature: float | None = None, deployment: str | None = None) -> AzureChatOpenAI:
-    """Get Azure OpenAI chat model."""
+    """Get Azure OpenAI chat model via Foundry."""
     if not settings.azure_openai_api_key:
         raise ValueError("AZURE_OPENAI_API_KEY not set in .env")
     
@@ -28,7 +28,7 @@ def get_chat_model(temperature: float | None = None, deployment: str | None = No
 
 @lru_cache()
 def get_embeddings_model(deployment: str | None = None) -> AzureOpenAIEmbeddings:
-    """Get Azure OpenAI embeddings model."""
+    """Get Azure OpenAI embeddings model via Foundry."""
     if not settings.azure_openai_api_key:
         raise ValueError("AZURE_OPENAI_API_KEY not set in .env")
     
