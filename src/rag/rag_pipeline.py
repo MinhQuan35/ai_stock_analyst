@@ -1,5 +1,5 @@
 """
-RAG Pipeline - End-to-end RAG
+RAG Pipeline - End-to-end RAG with Reranker
 """
 from pathlib import Path
 from typing import List, Optional
@@ -13,20 +13,24 @@ from src.rag.loaders.directory_loader import DirectoryLoader
 from src.rag.splitters.recursive_splitter import RecursiveTextSplitter
 from src.rag.stores.faiss_store import FAISSStore
 from src.rag.retrievers.similarity_retriever import SimilarityRetriever
+from src.rag.rerankers.cohere_reranker import CohereReranker
 from src.rag.chains.rag_chain import RAGChain
 
 
 class RAGPipeline:
-    """End-to-end RAG pipeline."""
+    """End-to-end RAG pipeline with reranker support."""
     
     INDEX_NAME = "stock_knowledge"
     
-    def __init__(self, data_dir: str | None = None):
+    def __init__(self, data_dir: str | None = None, use_reranker: bool | None = None):
         """Initialize RAG pipeline."""
         self.data_dir = Path(data_dir or settings.rag_data_dir)
+        self.use_reranker = use_reranker if use_reranker is not None else settings.rag_use_reranker
+        
         self.embeddings = get_embeddings_model()
         self.store = FAISSStore(self.embeddings)
         self.retriever: SimilarityRetriever | None = None
+        self.reranker: CohereReranker | None = None
         self.chain: RAGChain | None = None
     
     def index(self, force_rebuild: bool = False) -> None:
@@ -42,8 +46,17 @@ class RAGPipeline:
             self.store.create_from_documents(chunks)
             self.store.save(self.INDEX_NAME)
         
-        self.retriever = SimilarityRetriever(self.store)
-        self.chain = RAGChain(self.retriever)
+        self.retriever = SimilarityRetriever(self.store, k=settings.rag_top_k)
+        
+        if self.use_reranker:
+            try:
+                self.reranker = CohereReranker()
+                logger.info("Reranker enabled")
+            except Exception as e:
+                logger.warning(f"Reranker disabled: {e}")
+                self.reranker = None
+        
+        self.chain = RAGChain(self.retriever, reranker=self.reranker, top_n=settings.rag_top_n)
         logger.info("RAG pipeline ready")
     
     def query(self, question: str) -> str:
@@ -59,7 +72,7 @@ class RAGPipeline:
         return await self.chain.aquery(question)
     
     def retrieve(self, query: str) -> List[Document]:
-        """Retrieve relevant documents."""
+        """Retrieve relevant documents (with reranking if enabled)."""
         if not self.retriever:
             raise RAGError("Pipeline not indexed. Call index() first.")
         return self.retriever.retrieve(query)

@@ -1,20 +1,21 @@
 """
-RAG Chain - Combines retrieval with LLM generation
+RAG Chain - Combines retrieval + rerank + LLM generation
 """
-from typing import List
+from typing import List, Optional
 from langchain_core.documents import Document
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.runnables import RunnablePassthrough
+from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
 
 from src.llm import get_chat_model
 from src.rag.retrievers.similarity_retriever import SimilarityRetriever
+from src.rag.rerankers.cohere_reranker import CohereReranker
 from src.utils import logger
 from src.exceptions import RAGError
 
 
 class RAGChain:
-    """RAG chain using LCEL syntax."""
+    """RAG chain with reranker support."""
     
     DEFAULT_TEMPLATE = """You are a helpful assistant. Answer the question based ONLY on the following context.
 If you don't know the answer, say "I don't know based on the available information."
@@ -26,9 +27,17 @@ Question: {question}
 
 Answer:"""
     
-    def __init__(self, retriever: SimilarityRetriever, template: str | None = None):
+    def __init__(
+        self,
+        retriever: SimilarityRetriever,
+        reranker: Optional[CohereReranker] = None,
+        top_n: int = 5,
+        template: Optional[str] = None,
+    ):
         """Initialize RAG chain."""
         self.retriever = retriever
+        self.reranker = reranker
+        self.top_n = top_n
         self.template = template or self.DEFAULT_TEMPLATE
         self.llm = get_chat_model()
         self._chain = None
@@ -39,13 +48,27 @@ Answer:"""
             return "No relevant context found."
         return "\n\n---\n\n".join(doc.page_content for doc in docs)
     
+    def _retrieve_and_rerank(self, question: str) -> str:
+        """Retrieve docs, optionally rerank, then format."""
+        # Step 1: Retrieve from vector store
+        documents = self.retriever.retrieve(question)
+        
+        # Step 2: Rerank if available
+        if self.reranker and documents:
+            documents = self.reranker.rerank(question, documents, top_n=self.top_n)
+        else:
+            documents = documents[:self.top_n]
+        
+        # Step 3: Format
+        return self._format_docs(documents)
+    
     def _build_chain(self):
         """Build the LCEL chain."""
         prompt = ChatPromptTemplate.from_template(self.template)
         
         chain = (
             {
-                "context": self.retriever.as_langchain_retriever() | self._format_docs,
+                "context": RunnableLambda(self._retrieve_and_rerank),
                 "question": RunnablePassthrough(),
             }
             | prompt
