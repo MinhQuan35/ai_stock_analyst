@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-01T14:53:05.643461",
+  "total_articles": 10,
+  "test_cases": 10,
+  "metrics": {
+    "retrieval": {
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    "generation": {
+      "faithfulness": 0.8754,
+      "relevancy": 0.3599,
+      "answer_correctness": 1.0
+    },
+    "context": {
+      "precision": 0.0237,
+      "recall": 0.0
+    },
+    "hallucination_rate": 0.1246,
+    "summary": {
+      "total_queries": 10,
+      "total_retrieved": 20,
+      "total_relevant": 10
+    }
+  }
+}
