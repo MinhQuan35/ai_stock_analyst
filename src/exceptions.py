@@ -1,48 +1,26 @@
 """
-Custom exceptions
+Custom exceptions re-export for backward compatibility.
 """
+from src.utils.exceptions import (
+    AppError,
+    ConfigError,
+    DocumentLoadError,
+    ChunkingError,
+    EmbeddingError,
+    VectorStoreError,
+    RetrievalError,
+    LLMError,
+    RAGError,
+)
 
-
-class AppError(Exception):
-    """Base exception."""
-    pass
-
-
-class ConfigError(AppError):
-    """Configuration error."""
-    pass
-
-
-class DocumentLoadError(AppError):
-    """Document loading error."""
-    pass
-
-
-class ChunkingError(AppError):
-    """Text chunking error."""
-    pass
-
-
-class EmbeddingError(AppError):
-    """Embedding generation error."""
-    pass
-
-
-class VectorStoreError(AppError):
-    """Vector store error."""
-    pass
-
-
-class RetrievalError(AppError):
-    """Retrieval error."""
-    pass
-
-
-class LLMError(AppError):
-    """LLM error."""
-    pass
-
-
-class RAGError(AppError):
-    """RAG pipeline error."""
-    pass
+__all__ = [
+    "AppError",
+    "ConfigError",
+    "DocumentLoadError",
+    "ChunkingError",
+    "EmbeddingError",
+    "VectorStoreError",
+    "RetrievalError",
+    "LLMError",
+    "RAGError",
+]

@@ -1,0 +1,448 @@
+{
+  "timestamp": "2026-09-15 15:01:29",
+  "total_datasets_indexed": 33,
+  "total_queries_evaluated": 10,
+  "average_latency_seconds": 4.96,
+  "results": [
+    {
+      "id": 1,
+      "dataset": "fpt_2024_consolidated_financial_report.pdf & fpt_income_statement_summary.md",
+      "query": "What was FPT's consolidated net revenue and net profit in Q3 2024?",
+      "answer": "FPT's consolidated net revenue in Q3 2024 was VND 14,512,840 million, and its consolidated net profit after tax was VND 2,412,800 million.",
+      "ground_truth": "FPT reported consolidated net revenue of 14,510 billion VND and net profit after tax of 2,246 billion VND in Q3 2024.",
+      "latency_seconds": 5.16,
+      "metrics": {
+        "retrieval": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0
+        },
+        "generation_word": {
+          "faithfulness": 0.9545454545454546,
+          "relevancy": 0.9166666666666666,
+          "correctness": 0.0,
+          "hallucination": 0.045454545454545414
+        },
+        "context": {
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "generation_llm": {
+          "faithfulness": {
+            "score": 1.0,
+            "reason": "The answer is fully grounded in the provided context. The consolidated net revenue (VND 14,512,840 million) and net profit after tax (VND 2,412,800 million) for Q3 2024 are explicitly stated in the context under the 'Consolidated Income Statement' section."
+          },
+          "answer_relevancy": {
+            "score": 0.0,
+            "reason": "The answer provides specific figures for FPT's consolidated net revenue and net profit in Q3 2024, but there is no context provided to verify the accuracy or relevance of these figures. Without supporting evidence or context, the answer cannot be reliably evaluated as addressing the question."
+          },
+          "context_relevancy": {
+            "score": 0.9,
+            "reason": "The context contains detailed financial information about FPT Corporation's consolidated net revenue and net profit for Q3 2024, which directly answers the question. However, there is some irrelevant information, such as details about NVIDIA and unrelated financial metrics, which slightly reduces the relevance."
+          },
+          "correctness": {
+            "score": 0.2,
+            "reason": "The answer is mostly incorrect. While the general structure of the response aligns with the question, the specific figures for both net revenue and net profit are significantly different from the ground truth. The net revenue is slightly off, but the net profit is substantially incorrect."
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "dataset": "nvidia_q3_fy2025_official_results.docx",
+      "query": "What was NVIDIA's Data Center revenue in Q3 FY2025 and what was the growth rate?",
+      "answer": "NVIDIA's Data Center revenue in Q3 FY2025 was $30.77 billion, with a growth rate of 112% year-over-year.",
+      "ground_truth": "NVIDIA Data Center revenue reached $30.77 billion in Q3 FY2025, representing 112% growth YoY.",
+      "latency_seconds": 4.18,
+      "metrics": {
+        "retrieval": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0
+        },
+        "generation_word": {
+          "faithfulness": 0.95,
+          "relevancy": 0.7857142857142857,
+          "correctness": 0.0,
+          "hallucination": 0.050000000000000044
+        },
+        "context": {
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "generation_llm": {
+          "faithfulness": {
+            "score": 1.0,
+            "reason": "The answer is fully grounded in the provided context. The Data Center revenue of $30.77 billion and the 112% year-over-year growth rate are explicitly stated in the 'Revenue by Business Segment' section of the context."
+          },
+          "answer_relevancy": {
+            "score": 0.0,
+            "reason": "The answer cannot be evaluated for relevancy because no context is provided to verify the accuracy of the data. Without context, it is impossible to confirm if the answer addresses the question correctly."
+          },
+          "context_relevancy": {
+            "score": 0.9,
+            "reason": "The context contains the exact information needed to answer the question, specifically NVIDIA's Data Center revenue ($30.77 billion) and its growth rate (112% YoY and 17% sequentially). However, the answer provided is 'N/A,' which does not utilize the relevant context."
+          },
+          "correctness": {
+            "score": 1.0,
+            "reason": "The answer is fully correct and matches the ground truth exactly, both in terms of revenue and growth rate."
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "dataset": "cfa_equity_research_and_valuation_framework.md",
+      "query": "Explain the Discounted Cash Flow (DCF) Enterprise Value valuation formula in the CFA framework.",
+      "answer": "The Discounted Cash Flow (DCF) Enterprise Value valuation formula in the CFA framework calculates the intrinsic value of a firm by determining the present value of its future free cash flows to the firm (FCFF), discounted at the Weighted Average Cost of Capital (WACC). The formula is:\n\n$$\\text{Enterprise Value (EV)} = \\sum_{t=1}^{N} \\frac{\\text{FCFF}_t}{(1 + \\text{WACC})^t} + \\frac{\\text{Terminal Value}}{(1 + \\text{WACC})^N}$$\n\n- **FCFF (Free Cash Flow to Firm):** Represents the cash flows available to all capital providers (both debt and equity holders) after accounting for operating expenses, taxes, capital expenditures (CapEx), and changes in net working capital (ΔNWC). It is calculated as:\n  $$\\text{FCFF} = \\text{EBIT} \\times (1 - t) + \\text{Depreciation} - \\text{CapEx} - \\Delta \\text{NWC}$$\n\n- **WACC (Weighted Average Cost of Capital):** The discount rate used to bring future cash flows to their present value, reflecting the firm's cost of capital from both equity and debt.\n\n- **Terminal Value (TV):** Represents the value of the firm’s cash flows beyond the explicit forecast period (N years). It is often calculated using the Gordon Growth Model:\n  $$\\text{TV} = \\frac{\\text{FCFF}_{N+1}}{\\text{WACC} - g}$$\n  where \\(g\\) is the perpetual growth rate of the firm’s cash flows.\n\nThe DCF model combines the present value of the forecasted FCFF over the explicit forecast period (\\(t = 1\\) to \\(N\\)) and the present value of the terminal value to estimate the enterprise value of the firm.",
+      "ground_truth": "Enterprise Value (EV) is calculated as the sum of discounted Free Cash Flow to Firm (FCFF_t / (1 + WACC)^t) plus Terminal Value discounted to present value.",
+      "latency_seconds": 7.23,
+      "metrics": {
+        "retrieval": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0
+        },
+        "generation_word": {
+          "faithfulness": 0.673469387755102,
+          "relevancy": 0.9230769230769231,
+          "correctness": 0.0,
+          "hallucination": 0.326530612244898
+        },
+        "context": {
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "generation_llm": {
+          "faithfulness": {
+            "score": 0.9,
+            "reason": "The answer is well-grounded in the provided context, as it accurately explains the Discounted Cash Flow (DCF) Enterprise Value valuation formula, including the components such as FCFF, WACC, and Terminal Value, which are explicitly mentioned in the context. However, there is some extraneous information in the context that is unrelated to the question, such as P/E ratios and cash flow data, which could potentially introduce minor ambiguity."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "reason": "The answer directly and comprehensively addresses the question by explaining the DCF Enterprise Value valuation formula within the CFA framework. It includes the formula, definitions of key components (FCFF, WACC, Terminal Value), and their calculations, which are all relevant to the question."
+          },
+          "context_relevancy": {
+            "score": 0.8,
+            "reason": "The context provides a detailed explanation of the Discounted Cash Flow (DCF) Enterprise Value valuation formula, including its components such as FCFF, WACC, and Terminal Value, which are directly relevant to the question. However, some parts of the context include unrelated financial metrics and data, which slightly reduce its overall relevance."
+          },
+          "correctness": {
+            "score": 1.0,
+            "reason": "The answer correctly explains the DCF Enterprise Value valuation formula, including the calculation of FCFF, the use of WACC as the discount rate, and the inclusion of the Terminal Value. The explanation aligns with the ground truth and is accurate in its details."
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "dataset": "hpg_income_statement_summary.md & hpg_balance_sheet_quarterly.csv",
+      "query": "What is Hoa Phat Group's (HPG) gross margin and steel production trend in 2024?",
+      "answer": "I don't know based on the available information.",
+      "ground_truth": "Hoa Phat Group (HPG) reported strong crude steel production recovery and improving gross margins around 17-18% in 2024.",
+      "latency_seconds": 4.22,
+      "metrics": {
+        "retrieval": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0
+        },
+        "generation_word": {
+          "faithfulness": 0.2222222222222222,
+          "relevancy": 0.0,
+          "correctness": 0.0,
+          "hallucination": 0.7777777777777778
+        },
+        "context": {
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "generation_llm": {
+          "faithfulness": {
+            "score": 0.2,
+            "reason": "The answer 'I don't know based on the available information' is partially grounded in the context, as the context provides financial data for Hoa Phat Group (HPG) but does not explicitly mention gross margin or steel production trends for 2024. The system could have calculated the gross margin using the provided financial data but did not attempt to do so, and there is no information on steel production trends."
+          },
+          "answer_relevancy": {
+            "score": 0.0,
+            "reason": "The answer does not address the question as it provides no information about Hoa Phat Group's gross margin or steel production trend in 2024."
+          },
+          "context_relevancy": {
+            "score": 0.2,
+            "reason": "The context contains financial data and metrics related to Hoa Phat Group (HPG), such as gross profit and cost of sales, but it does not directly address the specific question about HPG's gross margin or steel production trend in 2024. The information provided is insufficient to fully answer the question."
+          },
+          "correctness": {
+            "score": 0.0,
+            "reason": "The answer 'I don't know based on the available information' is incorrect because the ground truth provides specific details about Hoa Phat Group's gross margin and steel production trend in 2024, which the system failed to retrieve or generate."
+          }
+        }
+      }
+    },
+    {
+      "id": 5,
+      "dataset": "vinamilk_vn30_financial_model_2024.xlsx & vnm_income_statement_summary.md",
+      "query": "What are the key financial ratios for Vinamilk (VNM) including P/E ratio and ROE in 2024?",
+      "answer": "Based on the available information:\n\n- **P/E Ratio for Vinamilk (VNM):** 16.5x  \n- **ROE (Return on Equity) for Vinamilk (VNM):** 24.1%  \n\nThese are the key financial ratios for Vinamilk (VNM) in 2024.",
+      "ground_truth": "Vinamilk (VNM) maintains a TTM P/E ratio around 16.5x, an ROE of ~24.1%, and strong net margins.",
+      "latency_seconds": 4.68,
+      "metrics": {
+        "retrieval": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0
+        },
+        "generation_word": {
+          "faithfulness": 0.6,
+          "relevancy": 0.8235294117647058,
+          "correctness": 0.0,
+          "hallucination": 0.4
+        },
+        "context": {
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "generation_llm": {
+          "faithfulness": {
+            "score": 0.9,
+            "reason": "The answer is grounded in the context provided, as the P/E ratio and ROE for Vinamilk (VNM) in 2024 are explicitly mentioned in the data. However, the context includes extraneous information unrelated to the question, which slightly reduces the clarity and focus."
+          },
+          "answer_relevancy": {
+            "score": 0.5,
+            "reason": "The answer provides values for the P/E ratio and ROE, which are part of the question. However, there is no context provided to verify the accuracy or source of the information, and the question explicitly asks for 'key financial ratios,' which may include more than just P/E and ROE. The response is incomplete and lacks supporting evidence."
+          },
+          "context_relevancy": {
+            "score": 0.4,
+            "reason": "The context contains some relevant financial data for Vinamilk (VNM), such as its P/E ratio, ROE, and financial statement summaries for 2024. However, it also includes a significant amount of unrelated information, such as data on other companies (e.g., NVIDIA, FPT, VCB) and technical indicators like RSI, which are not directly relevant to the question. The presence of extraneous data reduces the overall relevance of the context."
+          },
+          "correctness": {
+            "score": 0.0,
+            "reason": "The answer cannot be verified as correct because no context or source is provided to confirm the accuracy of the financial ratios for Vinamilk (VNM) in 2024. Without ground truth or reliable evidence, the correctness cannot be established."
+          }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "dataset": "real_aapl_daily_prices_2024.csv & real_msft_daily_prices_2024.csv",
+      "query": "Compare Apple (AAPL) and Microsoft (MSFT) stock price trends and market data in 2024.",
+      "answer": "I don't know based on the available information.",
+      "ground_truth": "Apple (AAPL) and Microsoft (MSFT) daily stock prices show steady tech sector growth with strong trading volume throughout 2024.",
+      "latency_seconds": 4.87,
+      "metrics": {
+        "retrieval": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0
+        },
+        "generation_word": {
+          "faithfulness": 0.1111111111111111,
+          "relevancy": 0.0,
+          "correctness": 0.0,
+          "hallucination": 0.8888888888888888
+        },
+        "context": {
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "generation_llm": {
+          "faithfulness": {
+            "score": 0.0,
+            "reason": "The answer 'I don't know based on the available information' is not grounded in the provided context. The context contains extensive stock price data for Microsoft (MSFT) but lacks any information about Apple (AAPL) stock price trends or market data for 2024, which is necessary to compare the two companies as requested in the question."
+          },
+          "answer_relevancy": {
+            "score": 0.0,
+            "reason": "The answer does not address the question as it provides no information or analysis about the stock price trends or market data for Apple (AAPL) and Microsoft (MSFT) in 2024."
+          },
+          "context_relevancy": {
+            "score": 0.2,
+            "reason": "The context contains some stock price data for Microsoft (MSFT) but lacks any information about Apple (AAPL) or a direct comparison of their stock price trends and market data in 2024. Additionally, much of the context is irrelevant to the question, such as unrelated financial metrics, other companies like Tesla, and data from years other than 2024."
+          },
+          "correctness": {
+            "score": 0.0,
+            "reason": "The answer 'I don't know based on the available information' does not address the question or provide any comparison of stock price trends or market data for Apple and Microsoft in 2024. It is incorrect given the ground truth provided."
+          }
+        }
+      }
+    },
+    {
+      "id": 7,
+      "dataset": "vcb_income_statement_summary.md & vcb_balance_sheet_quarterly.csv",
+      "query": "What is Vietcombank's (VCB) credit growth, net profit, and NPL ratio?",
+      "answer": "I don't know based on the available information.",
+      "ground_truth": "Vietcombank (VCB) maintains industry-leading net profit growth, ROE above 20%, and low non-performing loan (NPL) ratio under 1%.",
+      "latency_seconds": 4.55,
+      "metrics": {
+        "retrieval": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0
+        },
+        "generation_word": {
+          "faithfulness": 0.3333333333333333,
+          "relevancy": 0.0,
+          "correctness": 0.0,
+          "hallucination": 0.6666666666666667
+        },
+        "context": {
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "generation_llm": {
+          "faithfulness": {
+            "score": 0.0,
+            "reason": "The answer 'I don't know based on the available information' is not grounded in the provided context. The context contains financial data and metrics related to Vietcombank (VCB), such as loans, deposits, net profit, and other financial indicators, which could be used to infer or calculate the requested information. The system failed to utilize the available data to provide a relevant response."
+          },
+          "answer_relevancy": {
+            "score": 0.0,
+            "reason": "The answer does not address the question as it provides no information about Vietcombank's credit growth, net profit, or NPL ratio. It simply states a lack of knowledge without attempting to retrieve or generate relevant information."
+          },
+          "context_relevancy": {
+            "score": 0.0,
+            "reason": "The provided context does not contain any information directly related to Vietcombank's credit growth, net profit, or NPL ratio. The context primarily includes financial data and metrics for various companies, but none of it addresses the specific question about VCB's credit growth, net profit, or NPL ratio."
+          },
+          "correctness": {
+            "score": 0.0,
+            "reason": "The answer 'I don't know based on the available information' is incorrect because the ground truth provides specific details about Vietcombank's credit growth, net profit, and NPL ratio. The system failed to retrieve or generate the correct information."
+          }
+        }
+      }
+    },
+    {
+      "id": 8,
+      "dataset": "rsi.md & pe_ratio.md",
+      "query": "How are Relative Strength Index (RSI) and Price-to-Earnings (P/E) ratio interpreted in stock analysis?",
+      "answer": "The **Relative Strength Index (RSI)** is a momentum indicator used in technical analysis to evaluate the speed and change of price movements. It is calculated based on price changes over a 14-day period. RSI values are interpreted as follows:\n- **Above 70:** The stock is considered overbought, indicating it may decline.\n- **Below 30:** The stock is considered oversold, suggesting it may rise.\n- **Between 40-60:** The stock is in a neutral zone.\n\nThe **Price-to-Earnings (P/E) ratio** is a valuation metric that measures a company's stock price relative to its earnings per share (EPS). It is interpreted as follows:\n- **Lower P/E ratio:** May indicate the stock is undervalued.\n- **Higher P/E ratio:** May suggest the stock is overvalued or has strong growth expectations.\n\nBoth indicators provide different insights: RSI focuses on price momentum, while P/E evaluates valuation relative to earnings.",
+      "ground_truth": "RSI measures price momentum (overbought above 70, oversold below 30), while P/E ratio measures company valuation relative to per-share earnings.",
+      "latency_seconds": 6.12,
+      "metrics": {
+        "retrieval": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0
+        },
+        "generation_word": {
+          "faithfulness": 0.7325581395348837,
+          "relevancy": 0.9411764705882353,
+          "correctness": 0.0,
+          "hallucination": 0.2674418604651163
+        },
+        "context": {
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "generation_llm": {
+          "faithfulness": {
+            "score": 0.9,
+            "reason": "The answer is mostly grounded in the provided context. The explanation of RSI and P/E ratio aligns well with the context, including the interpretation of RSI values and the calculation and interpretation of the P/E ratio. However, the context includes additional details about financial metrics and examples that are not explicitly referenced in the answer, which slightly reduces the faithfulness score."
+          },
+          "answer_relevancy": {
+            "score": 1.0,
+            "reason": "The answer directly addresses the question by explaining how both RSI and P/E ratio are interpreted in stock analysis, providing clear and accurate descriptions of their respective uses and interpretations."
+          },
+          "context_relevancy": {
+            "score": 0.7,
+            "reason": "The context provides detailed explanations of RSI and P/E ratio, which are directly relevant to the question. However, it includes unrelated information about other financial metrics and companies, which slightly reduces the overall relevancy."
+          },
+          "correctness": {
+            "score": 1.0,
+            "reason": "The answer correctly explains the RSI as a momentum indicator with proper thresholds (above 70 for overbought, below 30 for oversold) and the P/E ratio as a valuation metric relative to earnings per share. Both interpretations align with the ground truth."
+          }
+        }
+      }
+    },
+    {
+      "id": 9,
+      "dataset": "mwg_income_statement_summary.md & mwg_balance_sheet_quarterly.csv",
+      "query": "What is Mobile World Group's (MWG) revenue recovery and store network profitability in 2024?",
+      "answer": "I don't know based on the available information.",
+      "ground_truth": "Mobile World Group (MWG) showed revenue recovery driven by Bach Hoa Xanh achieving break-even and retail electronics margin expansion.",
+      "latency_seconds": 4.27,
+      "metrics": {
+        "retrieval": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0
+        },
+        "generation_word": {
+          "faithfulness": 0.2222222222222222,
+          "relevancy": 0.0,
+          "correctness": 0.0,
+          "hallucination": 0.7777777777777778
+        },
+        "context": {
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "generation_llm": {
+          "faithfulness": {
+            "score": 0.0,
+            "reason": "The answer 'I don't know based on the available information' is not grounded in the provided context. The context contains financial data and performance metrics for Mobile World Group (MWG), which could be used to infer revenue recovery and store network profitability trends for 2024. The system failed to utilize this information."
+          },
+          "answer_relevancy": {
+            "score": 0.0,
+            "reason": "The answer does not address the question as it provides no relevant information about Mobile World Group's revenue recovery or store network profitability in 2024."
+          },
+          "context_relevancy": {
+            "score": 0.2,
+            "reason": "The context provides financial data and performance metrics for various companies, including Mobile World Group (MWG), but it does not directly address MWG's revenue recovery or store network profitability in 2024. While some financial figures for MWG are present, they are not explicitly linked to the specific aspects of revenue recovery or store network profitability mentioned in the question."
+          },
+          "correctness": {
+            "score": 0.0,
+            "reason": "The answer 'I don't know based on the available information' does not align with the ground truth, which provides specific details about MWG's revenue recovery and profitability drivers. The response fails to address the question accurately."
+          }
+        }
+      }
+    },
+    {
+      "id": 10,
+      "dataset": "real_nvda_daily_prices_2024.csv & real_tsla_daily_prices_2024.csv",
+      "query": "What were the major price movements for NVIDIA (NVDA) and Tesla (TSLA) in 2024 daily price records?",
+      "answer": "I don't know based on the available information.",
+      "ground_truth": "NVIDIA (NVDA) experienced exponential price appreciation driven by AI chip demand, while Tesla (TSLA) showed higher volatility around EV margins.",
+      "latency_seconds": 4.33,
+      "metrics": {
+        "retrieval": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0
+        },
+        "generation_word": {
+          "faithfulness": 0.1111111111111111,
+          "relevancy": 0.0625,
+          "correctness": 0.0,
+          "hallucination": 0.8888888888888888
+        },
+        "context": {
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "generation_llm": {
+          "faithfulness": {
+            "score": 0.0,
+            "reason": "The answer 'I don't know based on the available information' is not grounded in the provided context. The context contains detailed price data for NVIDIA (NVDA) and some financial information, which could be used to infer major price movements. The system failed to utilize this information to generate a relevant response."
+          },
+          "answer_relevancy": {
+            "score": 0.0,
+            "reason": "The answer does not address the question as it provides no information about the major price movements for NVIDIA (NVDA) and Tesla (TSLA) in 2024 daily price records."
+          },
+          "context_relevancy": {
+            "score": 0.0,
+            "reason": "The context does not provide any information about the major price movements for NVIDIA (NVDA) and Tesla (TSLA) in 2024. It includes data for other years, financial metrics, and unrelated information, but nothing directly relevant to the question."
+          },
+          "correctness": {
+            "score": 0.0,
+            "reason": "The answer 'I don't know based on the available information' does not address the question or provide any relevant information about the major price movements for NVIDIA (NVDA) and Tesla (TSLA) in 2024. Additionally, no context was provided to justify the lack of an answer."
+          }
+        }
+      }
+    }
+  ]
+}

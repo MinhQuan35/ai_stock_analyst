@@ -1,0 +1,29 @@
+# VNM Corporation - Income Statement Summary
+
+| item                                         | item_en                                     | item_id                                   |        2026-Q2 |        2026-Q1 |        2025-Q4 |        2025-Q3 |
+|:---------------------------------------------|:--------------------------------------------|:------------------------------------------|---------------:|---------------:|---------------:|---------------:|
+| Doanh thu bán hàng và cung cấp dịch vụ       | Sales                                       | sales                                     |    1.88557e+13 |    1.6178e+13  |    1.70454e+13 |    1.69681e+13 |
+| Các khoản giảm trừ doanh thu                 | Sales deductions                            | sales_deductions                          |   -8.30959e+09 |   -2.93343e+10 |   -1.1869e+10  |   -1.48526e+10 |
+| Doanh thu thuần                              | Net sales                                   | net_sales                                 |    1.88473e+13 |    1.61487e+13 |    1.70336e+13 |    1.69532e+13 |
+| Giá vốn hàng bán                             | Cost of sales                               | cost_of_sales                             |   -1.06433e+13 |   -9.25273e+12 |   -1.01435e+13 |   -9.86593e+12 |
+| Lợi nhuận gộp                                | Gross Profit                                | gross_profit                              |    8.20409e+12 |    6.89593e+12 |    6.89002e+12 |    7.0873e+12  |
+| Doanh thu hoạt động tài chính                | Financial income                            | financial_income                          |    4.26283e+11 |    3.86474e+11 |    3.58341e+11 |    3.9584e+11  |
+| Chi phí tài chính                            | Financial expenses                          | financial_expenses                        |   -1.47342e+11 |   -1.54556e+11 |   -1.07567e+11 |   -9.13545e+10 |
+| Chi phí lãi vay                              | Interest expenses                           | interest_expenses                         |   -1.16088e+11 |   -1.18301e+11 |   -8.99802e+10 |   -7.54646e+10 |
+| Chi phí bán hàng                             | Selling expenses                            | selling_expenses                          |   -4.10401e+12 |   -3.7247e+12  |   -3.18683e+12 |   -3.57375e+12 |
+| Chi phí quản lý doanh nghiệp                 | General and admin expenses                  | general_and_admin_expenses                |   -5.20564e+11 |   -4.5977e+11  |   -5.45076e+11 |   -4.65786e+11 |
+| Lãi/(lỗ) từ hoạt động kinh doanh             | Operating profit/(loss)                     | operating_profit_loss                     |    3.90896e+12 |    2.99183e+12 |    3.43287e+12 |    3.15775e+12 |
+| Thu nhập khác                                | Other incomes                               | other_incomes                             |    1.24588e+10 |    4.13795e+10 |    1.28003e+11 |    3.73897e+10 |
+| Chi phí khác                                 | Other expenses                              | other_expenses                            |   -2.22484e+10 |   -1.88136e+10 |   -8.38699e+10 |   -6.95419e+10 |
+| Thu nhập khác, ròng                          | Net other income/(expenses)                 | net_other_income_expenses                 |   -9.78968e+09 |    2.25659e+10 |    4.41327e+10 |   -3.21522e+10 |
+| Lãi/(lỗ) từ công ty liên doanh               | Income from investments in other entities   | income_from_investments_in_other_entities |    0           |    0           |    0           |    0           |
+| Lãi/(lỗ) trước thuế                          | Net accounting profit/(loss) before tax     | net_accounting_profit_loss_before_tax     |    3.89917e+12 |    3.0144e+12  |    3.477e+12   |    3.1256e+12  |
+| Thuế thu nhập doanh nghiệp - hiện thời       | Business income tax - current               | business_income_tax_current               |   -7.40564e+11 |   -5.08834e+11 |   -6.88335e+11 |   -6.44325e+11 |
+| Thuế thu nhập doanh nghiệp - hoãn lại        | Business income tax - deferred              | business_income_tax_deferred              |    2.57932e+10 |   -4.73415e+10 |    3.8534e+10  |    2.92573e+10 |
+| Chi phí thuế thu nhập doanh nghiệp           | Corporate income tax expenses               | corporate_income_tax_expenses             |   -7.14771e+11 |   -5.56175e+11 |   -6.49801e+11 |   -6.15068e+11 |
+| Lãi/(lỗ) thuần sau thuế                      | Net profit/(loss) after tax                 | net_profit_loss_after_tax                 |    3.1844e+12  |    2.45822e+12 |    2.8272e+12  |    2.51053e+12 |
+| Lợi ích của cổ đông thiểu số                 | Minority interests                          | minority_interests                        |    1.73705e+10 |    2.95012e+10 |   -1.31686e+10 |   -1.62338e+10 |
+| Lợi nhuận của Cổ đông của Công ty mẹ         | Attributable to parent company              | attributable_to_parent_company            |    3.16703e+12 |    2.42872e+12 |    2.84037e+12 |    2.52677e+12 |
+| Lãi cơ bản trên cổ phiếu (VND)               | EPS basic (VND)                             | eps_basic_vnd                             | 1369           | 1051           | 1224           | 1084           |
+| Lãi trên cổ phiếu pha loãng (VND)            | EPS diluted (VND)                           | eps_diluted_vnd                           |    0           |    0           |    0           |    0           |
+| Lãi/(lỗ) từ công ty liên doanh (từ năm 2015) | Gain/(loss) from joint ventures (from 2015) | gain_loss_from_joint_ventures_from_2015   |    5.05103e+10 |    4.84598e+10 |    2.39845e+10 |   -1.94492e+11 |

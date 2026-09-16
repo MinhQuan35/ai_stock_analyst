@@ -1,6 +1,6 @@
 """
-LLM module
+LLM package re-export
 """
-from .llm_factory import get_chat_model, get_embeddings_model
+from src.models import get_chat_model, get_embeddings_model
 
 __all__ = ["get_chat_model", "get_embeddings_model"]

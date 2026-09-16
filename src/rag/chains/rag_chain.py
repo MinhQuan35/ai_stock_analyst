@@ -17,8 +17,9 @@ from src.exceptions import RAGError
 class RAGChain:
     """RAG chain with reranker support."""
     
-    DEFAULT_TEMPLATE = """You are a helpful assistant. Answer the question based ONLY on the following context.
-If you don't know the answer, say "I don't know based on the available information."
+    DEFAULT_TEMPLATE = """You are a helpful financial assistant. Answer the question based ONLY on the following context.
+Always provide your answer in English.
+If you don't know the answer or the information is not available in the context, say "I don't know based on the available information."
 
 Context:
 {context}

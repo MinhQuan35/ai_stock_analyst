@@ -1,10 +1,11 @@
-# ===== Environment =====
+# ===== Environment & Secrets =====
 .env
 .env.local
 .env.*.local
 *.env
+!.env.example
 
-# ===== Python =====
+# ===== Python & Virtual Environments =====
 __pycache__/
 *.py[cod]
 *$py.class
@@ -18,12 +19,29 @@ ENV/
 *.egg-info/
 dist/
 build/
+*.spec
+
+# ===== Testing & Coverage =====
 .pytest_cache/
 .coverage
 htmlcov/
 .tox/
+test-results/
+playwright-report/
+blob-report/
 
-# ===== IDE =====
+# ===== Node & Frontend =====
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/build/
+frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ===== IDE & OS Metadata =====
 .vscode/
 .idea/
 *.swp
@@ -31,24 +49,25 @@ htmlcov/
 *~
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# ===== Data =====
+# ===== Persistent Vector Stores & Cached Artifacts =====
 data/vector_store/*
 !data/vector_store/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+data/crawled/*
+!data/crawled/.gitkeep
 *.faiss
 *.faiss.index
 *.pkl
 *.pickle
 
-# ===== Logs =====
+# ===== Logs & Temporary Files =====
 *.log
-logs/
+logs/*
+!logs/.gitkeep
 *.pid
 *.seed
-
-# ===== Project =====
 *.bak
 *.tmp
-*.swp

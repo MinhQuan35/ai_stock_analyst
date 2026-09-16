@@ -1,31 +1,36 @@
 """
-Logger configuration
+Utils package exports
 """
-import logging
-import sys
-from pathlib import Path
-from src.config import settings
+from src.utils.config import settings, get_settings, Settings
+from src.utils.logger import logger, setup_logger
+from src.utils.helpers import ensure_dir, truncate_text
+from src.utils.exceptions import (
+    AppError,
+    ConfigError,
+    DocumentLoadError,
+    ChunkingError,
+    EmbeddingError,
+    VectorStoreError,
+    RetrievalError,
+    LLMError,
+    RAGError,
+)
 
-
-def setup_logger(name: str = "rag") -> logging.Logger:
-    """Setup logger."""
-    logger = logging.getLogger(name)
-    
-    if logger.handlers:
-        return logger
-    
-    logger.setLevel(getattr(logging, settings.app_log_level.upper(), logging.INFO))
-    
-    formatter = logging.Formatter(
-        "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S",
-    )
-    
-    console_handler = logging.StreamHandler(sys.stdout)
-    console_handler.setFormatter(formatter)
-    logger.addHandler(console_handler)
-    
-    return logger
-
-
-logger = setup_logger()
+__all__ = [
+    "settings",
+    "get_settings",
+    "Settings",
+    "logger",
+    "setup_logger",
+    "ensure_dir",
+    "truncate_text",
+    "AppError",
+    "ConfigError",
+    "DocumentLoadError",
+    "ChunkingError",
+    "EmbeddingError",
+    "VectorStoreError",
+    "RetrievalError",
+    "LLMError",
+    "RAGError",
+]
