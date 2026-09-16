@@ -31,12 +31,11 @@ pipeline = None
 evaluator = None
 
 
-@app.on_event("startup")
-async def startup():
-    """Initialize agent pipeline on startup."""
+async def init_pipeline():
+    """Background task to initialize RAG pipeline without blocking server startup."""
     global pipeline
     try:
-        logger.info("Initializing Financial Agent pipeline...")
+        logger.info("Initializing Financial Agent pipeline in background...")
         from src.agent import RAGPipeline
         pipeline = RAGPipeline()
         pipeline.index()
@@ -44,6 +43,13 @@ async def startup():
     except Exception as e:
         logger.error(f"Failed to initialize pipeline: {e}")
         pipeline = None
+
+
+@app.on_event("startup")
+async def startup():
+    """Initialize agent pipeline on startup in background."""
+    import asyncio
+    asyncio.create_task(init_pipeline())
 
 
 @app.get("/", response_class=HTMLResponse)
