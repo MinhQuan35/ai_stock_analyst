@@ -102,9 +102,12 @@ def get_vietnam_stock_quote(symbol: str) -> str:
     """
     clean_sym = symbol.strip().upper()
     try:
+        from datetime import datetime, timedelta
         from vnstock.api.quote import Quote
+        start_date = (datetime.now() - timedelta(days=35)).strftime("%Y-%m-%d")
+        end_date = datetime.now().strftime("%Y-%m-%d")
         q = Quote(symbol=clean_sym, source="VCI")
-        df = q.history(start="2024-01-01", end="2026-12-31")
+        df = q.history(start=start_date, end=end_date)
         if df is None or df.empty:
             return f"No price history found for Vietnamese ticker '{clean_sym}'."
 
