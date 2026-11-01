@@ -76,7 +76,7 @@ def run_benchmark():
         # Step B: Generate Answer
         start_time = time.time()
         answer = pipeline.query(item["query"])
-        latency = round(time.time() - start_time, 2)
+        latency = time.time() - start_time
         
         # Step C: Evaluate via RAGAS / LLM-as-a-Judge
         eval_res = evaluator.evaluate(

@@ -5,12 +5,27 @@ Supports:
 - Vietnamese Market stocks via vnstock
 - RAG Document Knowledge Retrieval wrapper
 """
+import json
+import os
+from pathlib import Path
 from typing import Optional, List
 from langchain_core.tools import tool
 from langchain_core.documents import Document
 import yfinance as yf
 
 from src.utils.logger import logger
+
+
+def _snapshot() -> Optional[dict]:
+    """Load frozen market data when MARKET_DATA_SNAPSHOT is set (reproducible benchmarks)."""
+    path = os.getenv("MARKET_DATA_SNAPSHOT")
+    if not path:
+        return None
+    try:
+        return json.loads(Path(path).read_text(encoding="utf-8"))
+    except Exception as e:
+        logger.warning(f"Cannot read snapshot {path}: {e}")
+        return None
 
 
 @tool
@@ -22,6 +37,22 @@ def get_global_stock_quote(symbol: str) -> str:
         symbol: The stock ticker symbol in uppercase (e.g. 'NVDA', 'MSFT').
     """
     clean_sym = symbol.strip().upper()
+
+    snap = _snapshot()
+    if snap is not None:
+        stock = snap.get("global_stocks", {}).get(clean_sym)
+        if not stock:
+            return f"No snapshot data for global ticker '{clean_sym}' (as of {snap.get('market_date')})."
+        return (
+            f"**{stock.get('name', clean_sym)} ({clean_sym})** Market Data (as of {snap.get('market_date')}):\n"
+            f"- **Current Price**: {stock['price']:.2f} {stock.get('currency', 'USD')} ({stock.get('change_pct', 0):+.2f}%)\n"
+            f"- **Day Range**: {stock.get('low', 0):.2f} - {stock.get('high', 0):.2f} {stock.get('currency', 'USD')}\n"
+            f"- **52-Week Range**: {stock.get('year_low', 0):.2f} - {stock.get('year_high', 0):.2f}\n"
+            f"- **Market Cap**: ${stock.get('market_cap', 0) / 1e12:.2f}T\n"
+            f"- **P/E Ratio**: {stock.get('pe_ratio', 'N/A')}\n"
+            f"- **Volume**: {stock.get('volume', 0):,.0f} shares"
+        )
+
     try:
         ticker = yf.Ticker(clean_sym)
         fast = ticker.fast_info
@@ -71,7 +102,19 @@ def get_ai_tech_sector_movers() -> str:
     """
     key_tickers = ["NVDA", "MSFT", "GOOGL", "AMD", "TSM", "ORCL", "PLTR", "AMZN"]
     rows = []
-    
+
+    snap = _snapshot()
+    if snap is not None:
+        for item in snap.get("global_tech_movers", []):
+            sign = "+" if item["change_pct"] >= 0 else ""
+            rows.append(f"| {item['symbol']} | ${item['price']:.2f} | {sign}{item['change_pct']:.2f}% |")
+        header = "| Ticker | Last Price | Daily Change |\n|---|---|---|\n"
+        return (
+            f"### Global AI & Cloud Infrastructure Leaders (as of {snap.get('market_date')})\n"
+            + header
+            + "\n".join(rows)
+        )
+
     for sym in key_tickers:
         try:
             t = yf.Ticker(sym)
@@ -101,6 +144,19 @@ def get_vietnam_stock_quote(symbol: str) -> str:
         symbol: The 3-character stock ticker symbol in uppercase (e.g. 'FPT', 'HPG').
     """
     clean_sym = symbol.strip().upper()
+
+    snap = _snapshot()
+    if snap is not None:
+        stock = snap.get("vietnam_stocks", {}).get(clean_sym)
+        if not stock:
+            return f"No snapshot data for Vietnamese ticker '{clean_sym}' (as of {snap.get('market_date')})."
+        return (
+            f"**Vietnam Stock: {clean_sym}** (Trading Date: {snap.get('market_date')}):\n"
+            f"- **Close Price**: {stock['close_price']:,.0f} VND ({stock.get('change_pct', 0):+.2f}%)\n"
+            f"- **Open / High / Low**: {stock.get('open', 0):,.0f} / {stock.get('high', 0):,.0f} / {stock.get('low', 0):,.0f} VND\n"
+            f"- **Trading Volume**: {stock.get('volume', 0):,.0f} shares"
+        )
+
     try:
         from datetime import datetime, timedelta
         from vnstock.api.quote import Quote
@@ -130,6 +186,17 @@ def get_vietnam_stock_quote(symbol: str) -> str:
 @tool
 def get_vietnam_market_movers() -> str:
     """Retrieve current market leaders and active VN30 stock highlights in Vietnam."""
+    snap = _snapshot()
+    if snap is not None:
+        m = snap.get("vietnam_market_movers", {})
+        leaders = ", ".join(m.get("top_active_leaders", []))
+        return (
+            f"### Vietnam Market (as of {snap.get('market_date')})\n"
+            f"- **{m.get('index_name', 'VN-Index')}**: {m.get('index_points', 0)} "
+            f"({m.get('index_change_pts', 0):+.2f} pts, {m.get('index_change_pct', 0):+.2f}%)\n"
+            f"- **Top active leaders**: {leaders}\n"
+            f"- **Foreign net flow**: {m.get('foreign_net_vnd', 0):,.0f} VND"
+        )
     return (
         "### Vietnam Active Market Leaders (VN30)\n"
         "- **FPT**: Technology & Software Outsourcing (AI Factory partnership)\n"
@@ -141,13 +208,54 @@ def get_vietnam_market_movers() -> str:
     )
 
 
+@tool
+def get_price_history_summary(symbol: str) -> str:
+    """Summarize the daily price history of a GLOBAL ticker (AAPL, MSFT, NVDA, TSLA)
+    from the local dataset: first/last close, highest/lowest close with dates,
+    average close, and total return. Only for global tickers; Vietnamese tickers
+    (FPT, HPG, MWG, VCB, VNM) must use `get_vietnam_stock_quote`.
+
+    Args:
+        symbol: The stock ticker symbol in uppercase (e.g. 'AAPL', 'NVDA', 'MSFT', 'TSLA').
+    """
+    import csv
+
+    sym = symbol.strip().upper()
+    path = Path("data/raw") / f"real_{sym.lower()}_daily_prices_2024.csv"
+    if not path.exists():
+        return (
+            f"No local price history file for '{sym}'. "
+            "If this is a Vietnamese ticker, use get_vietnam_stock_quote instead."
+        )
+
+    with open(path, encoding="utf-8-sig", newline="") as f:
+        rows = [r for r in csv.DictReader(f) if str(r.get("Close", "")).strip()]
+
+    priced = [(r["Date"], float(r["Close"])) for r in rows]
+    closes = [c for _, c in priced]
+    hi = max(priced, key=lambda x: x[1])
+    lo = min(priced, key=lambda x: x[1])
+
+    return (
+        f"**{sym} Price History Summary** ({priced[0][0]} to {priced[-1][0]}, "
+        f"{len(priced)} trading days):\n"
+        f"- First close: {closes[0]} on {priced[0][0]}\n"
+        f"- Last close: {closes[-1]} on {priced[-1][0]}\n"
+        f"- Highest close: {hi[1]} on {hi[0]}\n"
+        f"- Lowest close: {lo[1]} on {lo[0]}\n"
+        f"- Average close: {sum(closes) / len(closes):.2f}\n"
+        f"- Total return: {(closes[-1] - closes[0]) / closes[0] * 100:.2f}%"
+    )
+
+
 def create_rag_search_tool(retriever, reranker=None, top_n: int = 5):
     """Factory creating a LangChain tool bound to the RAG retriever and reranker."""
     
     @tool
     def search_financial_reports_and_knowledge(query: str) -> str:
-        """Search the indexed corporate financial database, quarterly reports (Q3/Q4 2024 for FPT, HPG, MWG, VCB, VNM, NVIDIA),
-        valuation frameworks (DCF, P/E, RSI), and CFA equity research documents.
+        """Search the indexed corporate financial database, quarterly statements with the latest
+        available quarters for FPT, HPG, MWG, VCB, VNM and NVIDIA, plus valuation frameworks
+        (DCF, P/E, RSI), technical indicators, and CFA equity research documents.
 
         Args:
             query: The specific financial question, ratio inquiry, or company metric to look up.

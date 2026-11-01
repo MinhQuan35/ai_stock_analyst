@@ -19,6 +19,7 @@ from src.tools.market_tools import (
     get_ai_tech_sector_movers,
     get_vietnam_stock_quote,
     get_vietnam_market_movers,
+    get_price_history_summary,
     create_rag_search_tool,
 )
 from src.agent.executor import RAGChain
@@ -77,6 +78,7 @@ class RAGPipeline:
                 get_ai_tech_sector_movers,
                 get_vietnam_stock_quote,
                 get_vietnam_market_movers,
+                get_price_history_summary,
                 rag_tool,
             ]
             self.tool_agent = StockAnalystToolAgent(tools=tools)
@@ -89,15 +91,30 @@ class RAGPipeline:
     
     def query(self, question: str) -> str:
         """Ask a question to the agent using autonomous tool calling with RAG fallback."""
+        return self.query_with_details(question)["answer"]
+
+    def query_with_details(self, question: str) -> dict:
+        """Ask a question and return full trajectory and execution details."""
         if self.tool_agent:
             try:
-                return self.tool_agent.query(question)
+                res = self.tool_agent.query_with_details(question)
+                if not res.get("fallback_triggered", False):
+                    return res
+                logger.warning("Tool agent triggered fallback, falling back to RAG chain...")
             except Exception as e:
                 logger.warning(f"Tool agent failed, falling back to RAG chain: {e}")
 
         if not self.chain:
             raise RAGError("Pipeline not indexed. Call index() first.")
-        return self.chain.query(question)
+        
+        chain_answer = self.chain.query(question)
+        return {
+            "answer": chain_answer,
+            "tools_called": ["search_financial_reports_and_knowledge"],
+            "tool_calls_detail": [{"tool": "search_financial_reports_and_knowledge", "args": {"query": question}, "success": True}],
+            "tool_success_rate": 1.0,
+            "fallback_triggered": True if self.tool_agent else False
+        }
     
     async def aquery(self, question: str) -> str:
         """Async query to the agent using autonomous tool calling with RAG fallback."""

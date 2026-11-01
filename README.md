@@ -35,7 +35,7 @@ Financial analysis requires bridging two distinct domains:
 
 Traditional RAG systems fail when asked for real-time market prices because static vector stores lack intraday data. Conversely, standalone LLMs hallucinate financial metrics and cannot be trusted for investment decisions.
 
-The AI Stock Analyst resolves this dichotomy by employing an autonomous agent based on Azure OpenAI GPT-4o with native tool calling. The agent inspects the user query, determines whether real-time data, historical filings, or theoretical financial frameworks are needed, executes the appropriate tool deterministically, and synthesizes a grounded response formatted strictly in English.
+The AI Stock Analyst resolves this dichotomy by employing an autonomous agent based on Azure OpenAI GPT-4o with native tool calling. The agent inspects the user query, determines whether real-time data, historical filings, or theoretical financial frameworks are needed, executes the appropriate tool deterministically (up to three tool-calling rounds), and synthesizes a grounded response in the same language as the question.
 
 ---
 
@@ -44,7 +44,8 @@ The AI Stock Analyst resolves this dichotomy by employing an autonomous agent ba
 ### Autonomous Tool-Calling Agent
 - Model: Azure OpenAI GPT-4o (`2024-10-21` API version).
 - Native Tool Binding: Binds tools using LangChain Core (`llm.bind_tools`), avoiding fragile prompt parsing.
-- Multi-Turn Tool Resolution: Inspects tool call requests, invokes external APIs or vector search, appends `ToolMessage` payloads, and generates synthesized insights.
+- Multi-Turn Tool Resolution: Inspects tool call requests, invokes external APIs or vector search, appends `ToolMessage` payloads, and generates synthesized insights. Up to three tool-calling rounds per query so multi-hop comparisons can gather several sources.
+- Reporting-Period Integrity: Verifies that the requested period (e.g. "Q3 2024") exists in the retrieved context. If it does not, the agent states the period is unavailable instead of silently substituting another quarter.
 - Anti-Hallucination Grounding: Grounded in deterministic API returns or cited document excerpts. Explicitly states "I don't know based on the available information" when context is absent.
 
 ### Dual-Market Live Data Feeds
@@ -133,13 +134,14 @@ The knowledge base in `data/raw/` contains 33 multi-format financial files categ
 - Loader: `MultiFormatLoader` (`src/tools/loaders.py`) with format-specific extractors:
   - PDF: `pypdf` extraction of text streams.
   - DOCX: `python-docx` paragraph and table cell parsing.
-  - XLSX/XLS: `openpyxl` sheet iteration into structured tabular markdown.
-  - CSV: `pandas` structured comma-separated record conversion.
+  - XLSX/XLS: `openpyxl`, one self-contained document per row with column names retained (e.g. `TTM P/E: 16.5`).
+  - CSV: one self-contained document per row carrying the ticker, Vietnamese/English item label, and every quarter value together, so a chunk never loses its header.
+  - Price CSVs: additionally emit a derived `price_summary` document (first/last close, highest/lowest close with dates, average close, total return).
   - Markdown/TXT: UTF-8 standard text loaders.
 - Text Splitter: `RecursiveTextSplitter` (`src/tools/splitter.py`):
   - Chunk Size: 500 characters.
   - Chunk Overlap: 50 characters.
-  - Separators: `["\n\n", "\n", " ", ""]`.
+  - Separators: `["\n\n", "\n", ". ", " ", ""]`.
 
 ### Embedding and Vector Index
 - Embedding Model: Azure OpenAI `text-embedding-3-large`.
@@ -167,7 +169,10 @@ The knowledge base in `data/raw/` contains 33 multi-format financial files categ
 
 ## 5. Autonomous Tool-Calling Agent and Tool Specifications
 
-The agent is implemented in `src/agent/tool_agent.py` as `StockAnalystToolAgent`. It exposes 5 distinct tools defined in `src/tools/market_tools.py`:
+The agent is implemented in `src/agent/tool_agent.py` as `StockAnalystToolAgent`. It exposes 6 distinct tools defined in `src/tools/market_tools.py`:
+
+### 0. Snapshot Replay Mode
+- Setting `MARKET_DATA_SNAPSHOT=<path-to-json>` makes every market tool read frozen data instead of the live network. Used by the benchmark so real-time queries are reproducible.
 
 ### 1. `get_global_stock_quote`
 - Description: Fetches real-time price, market valuation, 52-week high/low, and trailing/forward P/E ratio for global equities.
@@ -190,8 +195,15 @@ The agent is implemented in `src/agent/tool_agent.py` as `StockAnalystToolAgent`
 - Description: Provides current VN30 benchmark sector leaders and industry highlights.
 - Tracked Companies: FPT, HPG, VCB, MWG, VNM.
 
-### 5. `search_financial_reports_and_knowledge`
-- Description: Searches indexed corporate financial statements, quarterly reports (Q3/Q4 2024), SEC filings, and valuation frameworks.
+### 5. `get_price_history_summary`
+- Description: Summarizes the local daily price history of a global ticker: first/last close, highest/lowest close with dates, average close, and total return.
+- Input Schema:
+  - `symbol` (string, required): Global ticker (`AAPL`, `MSFT`, `NVDA`, `TSLA`).
+- Implementation: Reads `data/raw/real_<symbol>_daily_prices_2024.csv` deterministically (no LLM arithmetic).
+- Note: Vietnamese tickers are served by `get_vietnam_stock_quote` (intraday open/high/low/close).
+
+### 6. `search_financial_reports_and_knowledge`
+- Description: Searches indexed corporate financial statements, the latest available quarters, SEC filings, definitions, and valuation frameworks.
 - Input Schema:
   - `query` (string, required): Natural language search string or financial inquiry.
 - Implementation: Executes Hybrid Retrieval (Dense Vector + BM25 + RRF) and Cohere Reranking.
@@ -234,65 +246,97 @@ The web dashboard is served directly from `src/api/routes.py` with zero external
 
 ## 7. Project Metrics and Benchmark Evaluation
 
-The system was formally evaluated using the RAGAS evaluation framework and LLM-as-Judge with Azure OpenAI GPT-4o. The dataset comprised 10 test queries across 33 financial files.
+Two benchmark suites are available. The 150-query suite is the canonical one.
 
-### Benchmark Summary Metrics
+- `tests/evaluate_150_benchmark.py` — canonical benchmark (150 queries, 8 categories).
+- `tests/evaluate_ragas_benchmark.py` — legacy 5-query smoke test.
 
-| Metric | Measured Value | Standard Target | Assessment |
-|---|---|---|---|
-| Total Indexed Datasets | 33 Files | >= 20 Files | Comprehensive coverage |
-| Evaluated Queries | 10 Queries | 10 Test Cases | Validated across categories |
-| Average Latency | 4.96 seconds | < 6.00 seconds | Meets interactive standards |
-| Context Faithfulness | 94.0% | > 85.0% | Strong grounding |
-| Answer Correctness (Factual) | 100.0% | > 90.0% | Exact match on verified data |
-| Hallucination Rate (Grounded) | < 5.0% | < 10.0% | Minimal false assertions |
-| Unit Test Pass Rate | 100.0% (5/5) | 100.0% | Full tool test coverage |
+### Evaluation Method
 
-### Comprehensive Query-by-Query Benchmark Evaluation
+- Dataset generation: `scripts/build_benchmark.py` writes `data/benchmark/benchmark_v2.json`. Every expected value is read from the indexed corpus (CSV, XLSX, DOCX, or market snapshot) at build time, so ground truth cannot drift away from the data the agent actually sees.
+- Generation scoring: LLM-as-Judge (Azure GPT-4o) on correctness plus deterministic metrics — numerical accuracy (2% tolerance with unit scaling) and financial entity recall (tickers, periods, numbers).
+- Retrieval scoring: document-level after deduplicating chunks, computed only for queries that require the RAG tool (defined a priori, not filtered after the run).
+- `n/a` means "no signal for this query" and is excluded from the mean; the sample size `n` is reported for every metric.
+- Confidence interval: 95% bootstrap (1,000 resamples) on binary answer accuracy.
+- Real-time queries run against a frozen snapshot (`MARKET_DATA_SNAPSHOT`) so they are reproducible.
 
-| ID | Dataset Evaluated | Query | Latency | Faithfulness | Correctness | Relevancy |
-|---|---|---|---|---|---|---|
-| 1 | fpt_2024_consolidated_financial_report.pdf | FPT Q3 2024 net revenue and net profit | 5.16s | 1.00 (100%) | 0.90 | 0.90 |
-| 2 | nvidia_q3_fy2025_official_results.docx | NVIDIA Q3 FY2025 Data Center revenue and growth | 4.18s | 1.00 (100%) | 1.00 (100%) | 0.90 |
-| 3 | cfa_equity_research_and_valuation_framework.md | CFA Discounted Cash Flow (DCF) formula | 7.23s | 0.90 (90%) | 1.00 (100%) | 0.80 |
-| 4 | hpg_income_statement_summary.md | Hoa Phat Group gross margin trend | 4.22s | Grounded refusal | N/A | 0.20 |
-| 5 | vinamilk_vn30_financial_model_2024.xlsx | Vinamilk (VNM) P/E ratio and ROE | 4.68s | 0.90 (90%) | Verified | 0.40 |
-| 6 | real_aapl_daily_prices_2024.csv | Apple and Microsoft daily price comparison | 4.87s | Safe refusal | N/A | 0.10 |
-| 7 | vcb_income_statement_summary.md | Vietcombank credit growth and NPL | 4.65s | 1.00 (100%) | 0.95 | 0.85 |
-| 8 | rsi.md and pe_ratio.md | RSI formula and overbought threshold | 4.91s | 1.00 (100%) | 1.00 (100%) | 0.90 |
-| 9 | mwg_income_statement_summary.md | Mobile World revenue recovery drivers | 4.99s | Safe refusal | N/A | 0.20 |
-| 10 | real_nvda_daily_prices_2024.csv | NVIDIA and Tesla 2024 historical trends | 4.33s | Safe refusal | N/A | 0.10 |
+### 150-Query Benchmark Results (latest run)
+
+| Metric | Measured Value | Sample |
+|---|---|---|
+| Overall Answer Accuracy (binary) | **97.33%** (95% CI 94.67%–100.00%) | n=150 |
+| Numerical Accuracy | 96.96% | n=148 |
+| Financial Entities Recall | 96.98% | n=149 |
+| Tool Selection Accuracy | 98.00% | n=150 |
+| Tool Execution Success Rate | 100.00% | n=149 |
+| Fallback Rate | 0.00% | n=150 |
+| Retrieval Recall@5 | 96.84% | n=95 |
+| Retrieval Hit@5 | 100.00% | n=95 |
+| Retrieval MRR | 88.25% | n=95 |
+| Retrieval MAP@5 | 83.60% | n=95 |
+| Chunk Context Precision / Recall | 86.75% / 96.84% | n=95 |
+| Average Latency | 4.94 seconds/query | n=150 |
+| Total Run Time | 1,702 seconds | 150 queries |
+
+Retrieval `precision@5` is 22.95% by the standard definition (relevant documents / 5 slots); with 1–2 relevant source files per query and five retrieved chunks often coming from the same file, `doc_precision@5` (relevant / unique documents retrieved) is 33.19%. Recall (`96.84%`) and `hit@5` (`100%`) are the meaningful retrieval signals here.
+
+### Per-Category Breakdown
+
+| Category | Queries | Overall | Numerical | Tool Selection | Latency |
+|---|---:|---:|---:|---:|---:|
+| vn_historical_financial | 30 | 100.00% | 100.00% | 100.00% | 5.48s |
+| global_historical_financial | 21 | 100.00% | 100.00% | 100.00% | 3.40s |
+| ratios_and_valuation | 20 | 100.00% | 100.00% | 100.00% | 5.56s |
+| definitions_and_formulas | 10 | 100.00% | 94.44% | 90.00% | 5.93s |
+| realtime_price | 25 | 100.00% | 100.00% | 100.00% | 2.67s |
+| sector_market_overview | 14 | 85.71% | 69.23% | 85.71% | 3.01s |
+| cross_company_comparison | 20 | 95.00% | 100.00% | 100.00% | 8.02s |
+| financial_analysis_reasoning | 10 | 90.00% | 100.00% | 100.00% | 6.51s |
+| **Total** | **150** | **97.33%** | **96.96%** | **98.00%** | **4.94s** |
+
+Four queries still fail, all due to agent behaviour rather than measurement: the agent answers a foreign-net-flow question without calling the market movers tool, omits the requested count in a breadth question, misses one comparative figure, and drops one quarter in a trend summary.
+
+### Why the earlier 30% Score Was Wrong
+
+The previous 30% figure measured the harness more than the agent:
+
+- `MAP@5` could exceed 1.0 (duplicate chunks of the same document were each counted as hits).
+- Number extraction dropped decimals before a unit suffix, so `16.5x` was read as `16` and failed the 2% tolerance.
+- Queries with no numeric claim were scored a free `1.0`, inflating averages.
+- Aggregates skipped every query that scored zero, inflating retrieval metrics.
+- The LLM judge returned `0.0` whenever retrieval context was absent, penalising correct tool-based answers.
+- The benchmark asked about Q3 2024 data while the corpus had been refreshed to 2025–2026 quarters, and real-time ground truth came from a snapshot the tools never read.
+
+Each of these is now fixed and covered by `tests/test_evaluation_metrics.py` and `tests/test_loaders.py`.
 
 ### Automated Unit Test Metrics
 
-Results from `pytest tests/test_tool_agent.py -v`:
-
-| Test Function | Target Module | Status | Latency |
-|---|---|---|---|
-| `test_get_global_stock_quote_nvda` | `yfinance` live quote for NVDA | PASSED | 1.8s |
-| `test_get_ai_tech_sector_movers` | Global AI chip and cloud movers table | PASSED | 3.2s |
-| `test_get_vietnam_stock_quote_fpt` | `vnstock` live quote for FPT | PASSED | 2.1s |
-| `test_get_vietnam_market_movers` | VN30 benchmark sector highlights | PASSED | 0.05s |
-| `test_create_rag_search_tool` | RAG retrieval tool wrapper | PASSED | 0.02s |
-| Total Suite | 5 unit tests | 5/5 PASSED (100%) | Verified |
+| Test File | Scope | Status |
+|---|---|---|
+| `tests/test_evaluation_metrics.py` | Metric correctness (7 assertions) | PASSED |
+| `tests/test_loaders.py` | Row-level CSV/XLSX loading and price summary (3 tests) | PASSED |
+| `tests/test_tool_agent.py` | Market tools and tool calling | PASSED |
 
 ---
 
 ## 8. Engineering Rationale Behind the Performance Metrics
 
-The high benchmark metrics (94.0% faithfulness, 100% factual accuracy on verified queries, and sub-5s latency) are the direct consequence of four specific architectural decisions:
+The 97.33% answer accuracy and 100% tool-success rate follow from five architectural decisions:
 
-1. Noise Elimination via Cohere Rerank:
-   Standard RAG systems send 15 to 20 raw chunks to the LLM. In financial analysis, irrelevant tabular rows introduce confusion. Pruning the top 20 candidates down to 5 using Cohere Rerank eliminates distractors and enables the LLM to locate exact figures without hallucination.
+1. Ground Truth Bound to the Corpus:
+   Benchmark questions are generated from the same files the retriever indexes, and every expected value is re-read from those files at build time. A question can therefore never reference a reporting period the corpus does not contain.
 
-2. Hybrid Search with Reciprocal Rank Fusion:
-   Financial queries frequently hinge on exact alphanumeric tokens (e.g. "Q3 2024", "FCFF", "EBITDA", or ticker symbols). Dense embeddings often miss exact character strings. Combining BM25 sparse retrieval with dense FAISS vectors via RRF guarantees that tables containing exact figures rank in the top positions.
+2. Row-Level Tabular Chunking:
+   Financial CSVs and XLSX sheets are emitted as one self-contained document per row, carrying ticker, item label, and all period values. The previous chunking split tables away from their headers, which caused wrong-quarter answers.
 
-3. The Safe Refusal Pattern in Financial Intelligence:
-   In financial systems, refusing to answer when context is insufficient is a primary safety requirement rather than a failure. In the benchmark suite, queries #4, #6, #9, and #10 correctly triggered safe refusals ("I don't know based on the available information") because static historical CSVs lacked qualitative context. This prevented financial hallucinations and preserved the 94.0% faithfulness score.
+3. Deterministic Aggregation Tools:
+   Questions about highest/lowest/average price or total return are answered by `get_price_history_summary`, which computes them from the CSV directly. Asking a retriever to "find the maximum" among 251 rows is a category error.
 
-4. Deterministic Tool Calling vs Generative Hallucination:
-   For live market prices and valuation multiples, the model does not generate numbers from its parametric memory. Instead, it autonomously delegates execution to deterministic APIs (`yfinance` and `vnstock`). This architecture guarantees numerical accuracy by design.
+4. Noise Elimination via Cohere Rerank and Hybrid Retrieval:
+   BM25 handles exact alphanumeric tokens ("Q3 2024", "FCFF", "TTM P/E") while dense vectors handle paraphrases; RRF merges both, and reranking prunes 20 candidates to 5. Retrieval recall@5 is 96.84% with hit@5 at 100%.
+
+5. Reporting-Period Integrity and Snapshot Pinning:
+   The prompt forbids substituting another quarter when the requested period is missing, and market tools can be pinned to a frozen snapshot (`MARKET_DATA_SNAPSHOT`). This makes real-time results reproducible and prevents the earlier failure mode where a 2024 question was answered with 2026 prices.
 
 ---
 
@@ -344,7 +388,8 @@ ai_stock_analyst/
 ├── data/                          # Datasets, benchmark reports, and vector stores
 │   ├── raw/                       # 33 multi-format financial files (PDF, DOCX, CSV, XLSX, MD)
 │   ├── processed/                 # Processed chunks and temporary artifacts
-│   ├── ragas_benchmark_report.json# Full JSON evaluation benchmark report
+│   ├── benchmark/                 # benchmark_v2.json, market snapshot, evaluation reports
+│   ├── ragas_benchmark_report.json# Legacy 10-query evaluation report
 │   └── vector_store/              # Persistent FAISS and Qdrant index files
 │
 ├── src/                           # Source code root
@@ -366,7 +411,7 @@ ai_stock_analyst/
 │   │   ├── llm_client.py          # AzureChatOpenAI client factory
 │   │   └── embeddings.py          # AzureOpenAIEmbeddings client factory
 │   ├── prompts/                   # Prompt Templates
-│   │   ├── system_prompts.py      # Core RAG context templates (strictly English)
+│   │   ├── system_prompts.py      # Core RAG context templates
 │   │   └── agent_prompts.py       # Tool agent instruction prompts
 │   ├── utils/                     # Shared Utilities
 │   │   ├── config.py              # Application settings via pydantic-settings
@@ -378,13 +423,17 @@ ai_stock_analyst/
 │       └── schemas.py             # Pydantic request and response models
 │
 ├── scripts/                       # Automation Scripts
+│   ├── build_benchmark.py         # Generates benchmark_v2.json from the indexed corpus
 │   └── auto_test_demo.py          # Playwright on-screen browser test script
 │
 ├── tests/                         # Test Suite
 │   ├── test_tool_agent.py         # Unit tests for market tools and tool calling
 │   ├── test_agent.py              # Pipeline execution unit tests
 │   ├── test_api.py                # API route unit tests
-│   ├── evaluate_ragas_benchmark.py# RAGAS benchmark runner
+│   ├── test_evaluation_metrics.py # Metric regression tests (MAP, numbers, entities)
+│   ├── test_loaders.py            # Row-level loader regression tests
+│   ├── evaluate_150_benchmark.py  # Canonical 150-query benchmark runner
+│   ├── evaluate_ragas_benchmark.py# Legacy 5-query smoke benchmark
 │   └── evaluate_llm_judge.py      # LLM-as-Judge evaluation runner
 │
 └── logs/                          # System logs and test artifacts
@@ -489,6 +538,25 @@ python scripts/auto_test_demo.py
 ```
 
 The script will launch a visible Chromium browser window, test the Global AI Tech tab (`NVDA`), switch to the Vietnam Stocks tab (`FPT`), test the RAG benchmark viewer, and save screenshots to `logs/screenshots/`.
+
+### Option D: Run the Benchmark Suite
+
+```powershell
+# Regenerate ground truth from the current corpus (required after refreshing data/raw)
+python scripts/build_benchmark.py
+
+# Full 150-query evaluation with LLM judge (rebuilds index when loader output changed)
+python tests/evaluate_150_benchmark.py --rebuild --llm-judge
+
+# Single category, or a quick subset
+python tests/evaluate_150_benchmark.py --category realtime_price --llm-judge
+python tests/evaluate_150_benchmark.py --limit 10
+
+# Metric and loader regression tests
+python -m pytest tests/test_evaluation_metrics.py tests/test_loaders.py -q
+```
+
+Reports are written to `data/benchmark/benchmark_150_report.json`.
 
 ---
 

@@ -1,0 +1,195 @@
+{
+  "timestamp": "2024-10-30T15:00:00+07:00",
+  "market_date": "2024-10-30",
+  "vietnam_stocks": {
+    "FPT": {
+      "symbol": "FPT",
+      "name": "FPT Corporation",
+      "close_price": 138500.0,
+      "change_pct": 1.84,
+      "open": 136000.0,
+      "high": 139200.0,
+      "low": 135500.0,
+      "volume": 4850200,
+      "currency": "VND"
+    },
+    "VCB": {
+      "symbol": "VCB",
+      "name": "Vietcombank",
+      "close_price": 91200.0,
+      "change_pct": 0.44,
+      "open": 90800.0,
+      "high": 91600.0,
+      "low": 90500.0,
+      "volume": 1320500,
+      "currency": "VND"
+    },
+    "HPG": {
+      "symbol": "HPG",
+      "name": "Hoa Phat Group",
+      "close_price": 26800.0,
+      "change_pct": 1.13,
+      "open": 26500.0,
+      "high": 27000.0,
+      "low": 26300.0,
+      "volume": 22410000,
+      "currency": "VND"
+    },
+    "MWG": {
+      "symbol": "MWG",
+      "name": "Mobile World Group",
+      "close_price": 65400.0,
+      "change_pct": -0.61,
+      "open": 65800.0,
+      "high": 66200.0,
+      "low": 65100.0,
+      "volume": 5640000,
+      "currency": "VND"
+    },
+    "VNM": {
+      "symbol": "VNM",
+      "name": "Vinamilk",
+      "close_price": 68000.0,
+      "change_pct": 0.0,
+      "open": 68000.0,
+      "high": 68400.0,
+      "low": 67800.0,
+      "volume": 2150000,
+      "currency": "VND"
+    }
+  },
+  "global_stocks": {
+    "NVDA": {
+      "symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "price": 141.5,
+      "change_pct": 3.2,
+      "low": 138.2,
+      "high": 142.8,
+      "year_low": 45.2,
+      "year_high": 144.42,
+      "market_cap": 3480000000000.0,
+      "pe_ratio": 64.2,
+      "volume": 48200000,
+      "currency": "USD"
+    },
+    "AAPL": {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "price": 232.1,
+      "change_pct": 0.85,
+      "low": 230.15,
+      "high": 233.4,
+      "year_low": 164.08,
+      "year_high": 237.23,
+      "market_cap": 3520000000000.0,
+      "pe_ratio": 35.8,
+      "volume": 38100000,
+      "currency": "USD"
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "price": 428.5,
+      "change_pct": 1.1,
+      "low": 425.0,
+      "high": 430.2,
+      "year_low": 335.5,
+      "year_high": 468.35,
+      "market_cap": 3180000000000.0,
+      "pe_ratio": 36.4,
+      "volume": 21400000,
+      "currency": "USD"
+    },
+    "TSLA": {
+      "symbol": "TSLA",
+      "name": "Tesla, Inc.",
+      "price": 258.0,
+      "change_pct": 4.5,
+      "low": 248.5,
+      "high": 261.2,
+      "year_low": 138.8,
+      "year_high": 271.0,
+      "market_cap": 825000000000.0,
+      "pe_ratio": 72.1,
+      "volume": 68500000,
+      "currency": "USD"
+    },
+    "AMD": {
+      "symbol": "AMD",
+      "name": "Advanced Micro Devices",
+      "price": 158.2,
+      "change_pct": 2.1,
+      "low": 155.0,
+      "high": 160.0,
+      "currency": "USD"
+    },
+    "TSM": {
+      "symbol": "TSM",
+      "name": "Taiwan Semiconductor",
+      "price": 192.4,
+      "change_pct": 2.8,
+      "currency": "USD"
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "name": "Alphabet Inc.",
+      "price": 178.6,
+      "change_pct": 1.4,
+      "currency": "USD"
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "price": 192.8,
+      "change_pct": 1.25,
+      "currency": "USD"
+    }
+  },
+  "vietnam_market_movers": {
+    "index_name": "VN-Index",
+    "index_points": 1262.5,
+    "index_change_pts": 8.2,
+    "index_change_pct": 0.65,
+    "top_active_leaders": [
+      "HPG",
+      "FPT",
+      "MWG",
+      "VCB",
+      "VNM"
+    ],
+    "foreign_net_vnd": 125000000000.0
+  },
+  "global_tech_movers": [
+    {
+      "symbol": "NVDA",
+      "price": 141.5,
+      "change_pct": 3.2
+    },
+    {
+      "symbol": "TSM",
+      "price": 192.4,
+      "change_pct": 2.8
+    },
+    {
+      "symbol": "AMD",
+      "price": 158.2,
+      "change_pct": 2.1
+    },
+    {
+      "symbol": "MSFT",
+      "price": 428.5,
+      "change_pct": 1.1
+    },
+    {
+      "symbol": "GOOGL",
+      "price": 178.6,
+      "change_pct": 1.4
+    },
+    {
+      "symbol": "AMZN",
+      "price": 192.8,
+      "change_pct": 1.25
+    }
+  ]
+}

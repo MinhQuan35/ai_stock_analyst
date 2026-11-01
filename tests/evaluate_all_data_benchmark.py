@@ -126,7 +126,7 @@ def run_comprehensive_benchmark():
         
         # Step 2: Generate Answer
         answer = pipeline.query(query)
-        latency = round(time.time() - t0, 2)
+        latency = time.time() - t0
         latencies.append(latency)
         
         # Step 3: Run Evaluation Metrics
@@ -142,8 +142,10 @@ def run_comprehensive_benchmark():
         
         print(f"  A: {answer[:130]}...")
         print(f"  -> Latency: {latency}s")
-        print(f"  -> Retrieval Precision@5: {eval_metrics['retrieval']['precision']:.2%}")
-        print(f"  -> Retrieval Recall@5:    {eval_metrics['retrieval']['recall']:.2%}")
+        p = eval_metrics['retrieval']['precision']
+        r = eval_metrics['retrieval']['recall']
+        print(f"  -> Retrieval Precision@5: {'n/a' if p is None else f'{p:.2%}'}")
+        print(f"  -> Retrieval Recall@5:    {'n/a' if r is None else f'{r:.2%}'}")
         
         if "generation_llm" in eval_metrics and eval_metrics["generation_llm"]:
             llm_eval = eval_metrics["generation_llm"]
@@ -175,7 +177,7 @@ def run_comprehensive_benchmark():
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
         "total_datasets_indexed": 33,
         "total_queries_evaluated": len(DATASET_BENCHMARK_QUERIES),
-        "average_latency_seconds": round(sum(latencies) / len(latencies), 2) if latencies else 0,
+        "average_latency_seconds": (sum(latencies) / len(latencies)) if latencies else 0.0,
         "results": results,
     }
     

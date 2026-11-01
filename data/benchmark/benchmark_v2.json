@@ -1,0 +1,3050 @@
+[
+  {
+    "query_id": "VN__001",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Doanh thu thuần của FPT (FPT) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "13,788.50 tỷ VND",
+    "expected_values": [
+      13788.5
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__002",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận gộp của FPT (FPT) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "4,279.74 tỷ VND",
+    "expected_values": [
+      4279.74
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__003",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận từ hoạt động kinh doanh của FPT (FPT) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "2,885.71 tỷ VND",
+    "expected_values": [
+      2885.71
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__004",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận sau thuế của FPT (FPT) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "2,570.34 tỷ VND",
+    "expected_values": [
+      2570.34
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__005",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận của cổ đông công ty mẹ của FPT (FPT) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "2,567.59 tỷ VND",
+    "expected_values": [
+      2567.59
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__006",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Tổng tài sản của FPT (FPT) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "73,563.11 tỷ VND",
+    "expected_values": [
+      73563.11
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__007",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Doanh thu thuần của Hòa Phát (HPG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "55,158.90 tỷ VND",
+    "expected_values": [
+      55158.9
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "hpg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__008",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận gộp của Hòa Phát (HPG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "10,487.79 tỷ VND",
+    "expected_values": [
+      10487.79
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "hpg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__009",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận từ hoạt động kinh doanh của Hòa Phát (HPG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "7,155.00 tỷ VND",
+    "expected_values": [
+      7155.0
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "hpg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__010",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận sau thuế của Hòa Phát (HPG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "6,424.47 tỷ VND",
+    "expected_values": [
+      6424.47
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "hpg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__011",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận của cổ đông công ty mẹ của Hòa Phát (HPG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "6,371.02 tỷ VND",
+    "expected_values": [
+      6371.02
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "hpg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__012",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Tổng tài sản của Hòa Phát (HPG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "278,929.79 tỷ VND",
+    "expected_values": [
+      278929.79
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "hpg_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__013",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Doanh thu thuần của Thế Giới Di Động (MWG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "48,751.28 tỷ VND",
+    "expected_values": [
+      48751.28
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "mwg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__014",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận gộp của Thế Giới Di Động (MWG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "10,809.21 tỷ VND",
+    "expected_values": [
+      10809.21
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "mwg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__015",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận từ hoạt động kinh doanh của Thế Giới Di Động (MWG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "4,034.44 tỷ VND",
+    "expected_values": [
+      4034.44
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "mwg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__016",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận sau thuế của Thế Giới Di Động (MWG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "3,354.90 tỷ VND",
+    "expected_values": [
+      3354.9
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "mwg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__017",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận của cổ đông công ty mẹ của Thế Giới Di Động (MWG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "3,302.55 tỷ VND",
+    "expected_values": [
+      3302.55
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "mwg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__018",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Tổng tài sản của Thế Giới Di Động (MWG) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "104,914.96 tỷ VND",
+    "expected_values": [
+      104914.96
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "mwg_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__019",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Thu nhập lãi thuần của Vietcombank (VCB) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "19,141.76 tỷ VND",
+    "expected_values": [
+      19141.76
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vcb_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__020",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Tổng thu nhập hoạt động của Vietcombank (VCB) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "26,371.60 tỷ VND",
+    "expected_values": [
+      26371.6
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vcb_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__021",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận sau thuế của Vietcombank (VCB) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "14,550.96 tỷ VND",
+    "expected_values": [
+      14550.96
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vcb_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__022",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận của cổ đông công ty mẹ của Vietcombank (VCB) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "14,542.28 tỷ VND",
+    "expected_values": [
+      14542.28
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vcb_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__023",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Thu nhập khác ròng của Vietcombank (VCB) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "4,058.56 tỷ VND",
+    "expected_values": [
+      4058.56
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vcb_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__024",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Tổng tài sản của Vietcombank (VCB) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "2,657,440.57 tỷ VND",
+    "expected_values": [
+      2657440.57
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vcb_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__025",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Doanh thu thuần của Vinamilk (VNM) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "18,847.35 tỷ VND",
+    "expected_values": [
+      18847.35
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vnm_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__026",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận gộp của Vinamilk (VNM) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "8,204.09 tỷ VND",
+    "expected_values": [
+      8204.09
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vnm_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__027",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận từ hoạt động kinh doanh của Vinamilk (VNM) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "3,908.96 tỷ VND",
+    "expected_values": [
+      3908.96
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vnm_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__028",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận sau thuế của Vinamilk (VNM) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "3,184.40 tỷ VND",
+    "expected_values": [
+      3184.4
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vnm_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__029",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Lợi nhuận của cổ đông công ty mẹ của Vinamilk (VNM) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "3,167.03 tỷ VND",
+    "expected_values": [
+      3167.03
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vnm_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "VN__030",
+    "category": "vn_historical_financial",
+    "subcategory": "Single metric lookup",
+    "difficulty": "easy",
+    "query": "Tổng tài sản của Vinamilk (VNM) trong Q2 2026 là bao nhiêu tỷ VND?",
+    "expected_answer": "57,451.80 tỷ VND",
+    "expected_values": [
+      57451.8
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vnm_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_001",
+    "category": "global_historical_financial",
+    "subcategory": "Company filing lookup",
+    "difficulty": "easy",
+    "query": "What was NVIDIA's total revenue in Q3 FY2025?",
+    "expected_answer": "35.08 billion_usd",
+    "expected_values": [
+      35.08
+    ],
+    "expected_units": "billion_usd",
+    "reporting_period": "Q3 FY2025",
+    "source_reference": [
+      "nvidia_q3_fy2025_official_results.docx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_002",
+    "category": "global_historical_financial",
+    "subcategory": "Company filing lookup",
+    "difficulty": "easy",
+    "query": "What was NVIDIA's Data Center revenue in Q3 FY2025?",
+    "expected_answer": "30.77 billion_usd",
+    "expected_values": [
+      30.77
+    ],
+    "expected_units": "billion_usd",
+    "reporting_period": "Q3 FY2025",
+    "source_reference": [
+      "nvidia_q3_fy2025_official_results.docx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_003",
+    "category": "global_historical_financial",
+    "subcategory": "Company filing lookup",
+    "difficulty": "easy",
+    "query": "What was NVIDIA's Gaming & AI PC revenue in Q3 FY2025?",
+    "expected_answer": "3.28 billion_usd",
+    "expected_values": [
+      3.28
+    ],
+    "expected_units": "billion_usd",
+    "reporting_period": "Q3 FY2025",
+    "source_reference": [
+      "nvidia_q3_fy2025_official_results.docx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_004",
+    "category": "global_historical_financial",
+    "subcategory": "Company filing lookup",
+    "difficulty": "easy",
+    "query": "What was NVIDIA's GAAP gross margin in Q3 FY2025?",
+    "expected_answer": "74.6 percent",
+    "expected_values": [
+      74.6
+    ],
+    "expected_units": "percent",
+    "reporting_period": "Q3 FY2025",
+    "source_reference": [
+      "nvidia_q3_fy2025_official_results.docx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_005",
+    "category": "global_historical_financial",
+    "subcategory": "Company filing lookup",
+    "difficulty": "easy",
+    "query": "What was NVIDIA's GAAP diluted EPS in Q3 FY2025?",
+    "expected_answer": "0.78 usd",
+    "expected_values": [
+      0.78
+    ],
+    "expected_units": "usd",
+    "reporting_period": "Q3 FY2025",
+    "source_reference": [
+      "nvidia_q3_fy2025_official_results.docx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_006",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was AAPL's highest closing price in the price history file?",
+    "expected_answer": "340.08 USD",
+    "expected_values": [
+      340.08
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_aapl_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_007",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was AAPL's lowest closing price in the price history file?",
+    "expected_answer": "234.07 USD",
+    "expected_values": [
+      234.07
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_aapl_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_008",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was AAPL's average closing price in the price history file?",
+    "expected_answer": "279.68 USD",
+    "expected_values": [
+      279.68
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_aapl_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_009",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was AAPL's total return from first to last close in the price history file?",
+    "expected_answer": "41.95 percent",
+    "expected_values": [
+      41.95
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_aapl_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_010",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was MSFT's highest closing price in the price history file?",
+    "expected_answer": "542.07 USD",
+    "expected_values": [
+      542.07
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_msft_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_011",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was MSFT's lowest closing price in the price history file?",
+    "expected_answer": "352.83 USD",
+    "expected_values": [
+      352.83
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_msft_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_012",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was MSFT's average closing price in the price history file?",
+    "expected_answer": "447.83 USD",
+    "expected_values": [
+      447.83
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_msft_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_013",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was MSFT's total return from first to last close in the price history file?",
+    "expected_answer": "-2.8 percent",
+    "expected_values": [
+      -2.8
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_msft_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_014",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was NVDA's highest closing price in the price history file?",
+    "expected_answer": "235.74 USD",
+    "expected_values": [
+      235.74
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_nvda_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_015",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was NVDA's lowest closing price in the price history file?",
+    "expected_answer": "165.17 USD",
+    "expected_values": [
+      165.17
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_nvda_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_016",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was NVDA's average closing price in the price history file?",
+    "expected_answer": "195.2 USD",
+    "expected_values": [
+      195.2
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_nvda_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_017",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was NVDA's total return from first to last close in the price history file?",
+    "expected_answer": "22.76 percent",
+    "expected_values": [
+      22.76
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_nvda_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_018",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was TSLA's highest closing price in the price history file?",
+    "expected_answer": "489.88 USD",
+    "expected_values": [
+      489.88
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_tsla_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_019",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was TSLA's lowest closing price in the price history file?",
+    "expected_answer": "298.32 USD",
+    "expected_values": [
+      298.32
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_tsla_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_020",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was TSLA's average closing price in the price history file?",
+    "expected_answer": "405.81 USD",
+    "expected_values": [
+      405.81
+    ],
+    "expected_units": "USD",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_tsla_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "GLO_021",
+    "category": "global_historical_financial",
+    "subcategory": "Price history lookup",
+    "difficulty": "easy",
+    "query": "What was TSLA's total return from first to last close in the price history file?",
+    "expected_answer": "-7.7 percent",
+    "expected_values": [
+      -7.7
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2025-09-12 to 2026-09-11",
+    "source_reference": [
+      "real_tsla_daily_prices_2024.csv"
+    ],
+    "required_tools": [
+      "get_price_history_summary"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_001",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số TTM P/E của FPT Corporation (FPT) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "24.8 x",
+    "expected_values": [
+      24.8
+    ],
+    "expected_units": "x",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_002",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số P/B của FPT Corporation (FPT) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "5.9 x",
+    "expected_values": [
+      5.9
+    ],
+    "expected_units": "x",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_003",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số ROE (%) của FPT Corporation (FPT) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "26.4 percent",
+    "expected_values": [
+      26.4
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_004",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số ROA (%) của FPT Corporation (FPT) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "11.2 percent",
+    "expected_values": [
+      11.2
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_005",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số Dividend Yield (%) của FPT Corporation (FPT) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "1.8 percent",
+    "expected_values": [
+      1.8
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_006",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số Net Margin (%) của FPT Corporation (FPT) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "16.6 percent",
+    "expected_values": [
+      16.6
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_007",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số TTM P/E của Vietnam Dairy Products (Vinamilk) (VNM) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "16.5 x",
+    "expected_values": [
+      16.5
+    ],
+    "expected_units": "x",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_008",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số P/B của Vietnam Dairy Products (Vinamilk) (VNM) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "4.2 x",
+    "expected_values": [
+      4.2
+    ],
+    "expected_units": "x",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_009",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số ROE (%) của Vietnam Dairy Products (Vinamilk) (VNM) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "24.1 percent",
+    "expected_values": [
+      24.1
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_010",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số ROA (%) của Vietnam Dairy Products (Vinamilk) (VNM) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "15.8 percent",
+    "expected_values": [
+      15.8
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_011",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số Dividend Yield (%) của Vietnam Dairy Products (Vinamilk) (VNM) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "5.6 percent",
+    "expected_values": [
+      5.6
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_012",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số Net Margin (%) của Vietnam Dairy Products (Vinamilk) (VNM) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "17.0 percent",
+    "expected_values": [
+      17.0
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_013",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số TTM P/E của Joint Stock Commercial Bank for Foreign Trade of Vietnam (VCB) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "14.5 x",
+    "expected_values": [
+      14.5
+    ],
+    "expected_units": "x",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_014",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số P/B của Joint Stock Commercial Bank for Foreign Trade of Vietnam (VCB) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "2.8 x",
+    "expected_values": [
+      2.8
+    ],
+    "expected_units": "x",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_015",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số ROE (%) của Joint Stock Commercial Bank for Foreign Trade of Vietnam (VCB) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "21.8 percent",
+    "expected_values": [
+      21.8
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_016",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số ROA (%) của Joint Stock Commercial Bank for Foreign Trade of Vietnam (VCB) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "2.1 percent",
+    "expected_values": [
+      2.1
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_017",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số Dividend Yield (%) của Joint Stock Commercial Bank for Foreign Trade of Vietnam (VCB) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "2.5 percent",
+    "expected_values": [
+      2.5
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_018",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số Net Margin (%) của Joint Stock Commercial Bank for Foreign Trade of Vietnam (VCB) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "38.2 percent",
+    "expected_values": [
+      38.2
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_019",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số TTM P/E của Hoa Phat Group JSC (HPG) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "12.8 x",
+    "expected_values": [
+      12.8
+    ],
+    "expected_units": "x",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "RAT_020",
+    "category": "ratios_and_valuation",
+    "subcategory": "Valuation matrix lookup",
+    "difficulty": "easy",
+    "query": "Chỉ số P/B của Hoa Phat Group JSC (HPG) trong mô hình định giá VN30 2024 là bao nhiêu?",
+    "expected_answer": "1.7 x",
+    "expected_values": [
+      1.7
+    ],
+    "expected_units": "x",
+    "reporting_period": "2024",
+    "source_reference": [
+      "vinamilk_vn30_financial_model_2024.xlsx"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "DEF_001",
+    "category": "definitions_and_formulas",
+    "subcategory": "Conceptual explanation",
+    "difficulty": "easy",
+    "query": "RSI được tính theo công thức nào?",
+    "expected_answer": "RSI = 100 - [100 / (1 + RS)], với RS = Average Gain / Average Loss trong 14 ngày.",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "latest available",
+    "source_reference": [
+      "rsi.md"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "DEF_002",
+    "category": "definitions_and_formulas",
+    "subcategory": "Conceptual explanation",
+    "difficulty": "easy",
+    "query": "Vùng quá mua và quá bán của RSI là bao nhiêu?",
+    "expected_answer": "Quá mua khi RSI trên 70, quá bán khi RSI dưới 30.",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "latest available",
+    "source_reference": [
+      "rsi.md"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "DEF_003",
+    "category": "definitions_and_formulas",
+    "subcategory": "Conceptual explanation",
+    "difficulty": "easy",
+    "query": "RSI được tính dựa trên thay đổi giá trong bao nhiêu ngày?",
+    "expected_answer": "RSI dùng chu kỳ 14 ngày là phổ biến nhất.",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "latest available",
+    "source_reference": [
+      "rsi.md"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "DEF_004",
+    "category": "definitions_and_formulas",
+    "subcategory": "Conceptual explanation",
+    "difficulty": "easy",
+    "query": "Công thức tính tỷ lệ P/E là gì?",
+    "expected_answer": "P/E = Giá cổ phiếu / EPS (thu nhập trên mỗi cổ phần).",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "latest available",
+    "source_reference": [
+      "pe_ratio.md"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "DEF_005",
+    "category": "definitions_and_formulas",
+    "subcategory": "Conceptual explanation",
+    "difficulty": "easy",
+    "query": "Nếu cổ phiếu giá 75,000 VND và EPS 4,200 VND thì P/E bằng bao nhiêu?",
+    "expected_answer": "P/E = 75,000 / 4,200 = 17.9x.",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "latest available",
+    "source_reference": [
+      "pe_ratio.md"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "DEF_006",
+    "category": "definitions_and_formulas",
+    "subcategory": "Conceptual explanation",
+    "difficulty": "easy",
+    "query": "P/E của cổ phiếu value và growth trên thị trường Việt Nam thường nằm trong khoảng nào?",
+    "expected_answer": "Value stocks thường P/E 10-15x, growth stocks 20-30x.",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "latest available",
+    "source_reference": [
+      "pe_ratio.md"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "DEF_007",
+    "category": "definitions_and_formulas",
+    "subcategory": "Conceptual explanation",
+    "difficulty": "easy",
+    "query": "Công thức Enterprise Value trong mô hình DCF là gì?",
+    "expected_answer": "EV = tổng FCFF_t/(1+WACC)^t + Terminal Value/(1+WACC)^N.",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "latest available",
+    "source_reference": [
+      "cfa_equity_research_and_valuation_framework.md"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "DEF_008",
+    "category": "definitions_and_formulas",
+    "subcategory": "Conceptual explanation",
+    "difficulty": "easy",
+    "query": "Golden Cross trong phân tích kỹ thuật là gì?",
+    "expected_answer": "Golden Cross là khi SMA 50 ngày cắt lên trên SMA 200 ngày, xác nhận xu hướng tăng.",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "latest available",
+    "source_reference": [
+      "cfa_equity_research_and_valuation_framework.md"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "DEF_009",
+    "category": "definitions_and_formulas",
+    "subcategory": "Conceptual explanation",
+    "difficulty": "easy",
+    "query": "MACD line và Signal line được tính như thế nào?",
+    "expected_answer": "MACD line = EMA 12 kỳ - EMA 26 kỳ; Signal line = EMA 9 kỳ của MACD line.",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "latest available",
+    "source_reference": [
+      "cfa_equity_research_and_valuation_framework.md"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "DEF_010",
+    "category": "definitions_and_formulas",
+    "subcategory": "Conceptual explanation",
+    "difficulty": "easy",
+    "query": "Vùng an toàn của Altman Z-Score là bao nhiêu?",
+    "expected_answer": "Z > 2.99 là vùng an toàn; 1.81 < Z < 2.99 là vùng xám; Z < 1.81 là vùng khó khăn.",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "latest available",
+    "source_reference": [
+      "cfa_equity_research_and_valuation_framework.md"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "REA_001",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá đóng cửa của cổ phiếu FPT trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "138,500 VND",
+    "expected_values": [
+      138500.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_002",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá mở cửa của cổ phiếu FPT trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "136,000 VND",
+    "expected_values": [
+      136000.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_003",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá cao nhất của cổ phiếu FPT trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "139,200 VND",
+    "expected_values": [
+      139200.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_004",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá thấp nhất của cổ phiếu FPT trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "135,500 VND",
+    "expected_values": [
+      135500.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_005",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá đóng cửa của cổ phiếu VCB trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "91,200 VND",
+    "expected_values": [
+      91200.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_006",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá mở cửa của cổ phiếu VCB trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "90,800 VND",
+    "expected_values": [
+      90800.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_007",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá cao nhất của cổ phiếu VCB trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "91,600 VND",
+    "expected_values": [
+      91600.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_008",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá thấp nhất của cổ phiếu VCB trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "90,500 VND",
+    "expected_values": [
+      90500.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_009",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá đóng cửa của cổ phiếu HPG trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "26,800 VND",
+    "expected_values": [
+      26800.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_010",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá mở cửa của cổ phiếu HPG trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "26,500 VND",
+    "expected_values": [
+      26500.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_011",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá cao nhất của cổ phiếu HPG trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "27,000 VND",
+    "expected_values": [
+      27000.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_012",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá thấp nhất của cổ phiếu HPG trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "26,300 VND",
+    "expected_values": [
+      26300.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_013",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá đóng cửa của cổ phiếu MWG trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "65,400 VND",
+    "expected_values": [
+      65400.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_014",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá mở cửa của cổ phiếu MWG trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "65,800 VND",
+    "expected_values": [
+      65800.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_015",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá cao nhất của cổ phiếu MWG trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "66,200 VND",
+    "expected_values": [
+      66200.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_016",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá thấp nhất của cổ phiếu MWG trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "65,100 VND",
+    "expected_values": [
+      65100.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_017",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá đóng cửa của cổ phiếu VNM trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "68,000 VND",
+    "expected_values": [
+      68000.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_018",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá mở cửa của cổ phiếu VNM trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "68,000 VND",
+    "expected_values": [
+      68000.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_019",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá cao nhất của cổ phiếu VNM trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "68,400 VND",
+    "expected_values": [
+      68400.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_020",
+    "category": "realtime_price",
+    "subcategory": "VN single-stock quote",
+    "difficulty": "easy",
+    "query": "Giá thấp nhất của cổ phiếu VNM trong phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "67,800 VND",
+    "expected_values": [
+      67800.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_021",
+    "category": "realtime_price",
+    "subcategory": "Global single-stock quote",
+    "difficulty": "easy",
+    "query": "What was NVDA's price in the 2024-10-30 market snapshot?",
+    "expected_answer": "141.50 USD",
+    "expected_values": [
+      141.5
+    ],
+    "expected_units": "usd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_global_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_022",
+    "category": "realtime_price",
+    "subcategory": "Global single-stock quote",
+    "difficulty": "easy",
+    "query": "What was AAPL's price in the 2024-10-30 market snapshot?",
+    "expected_answer": "232.10 USD",
+    "expected_values": [
+      232.1
+    ],
+    "expected_units": "usd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_global_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_023",
+    "category": "realtime_price",
+    "subcategory": "Global single-stock quote",
+    "difficulty": "easy",
+    "query": "What was MSFT's price in the 2024-10-30 market snapshot?",
+    "expected_answer": "428.50 USD",
+    "expected_values": [
+      428.5
+    ],
+    "expected_units": "usd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_global_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_024",
+    "category": "realtime_price",
+    "subcategory": "Global single-stock quote",
+    "difficulty": "easy",
+    "query": "What was TSLA's price in the 2024-10-30 market snapshot?",
+    "expected_answer": "258.00 USD",
+    "expected_values": [
+      258.0
+    ],
+    "expected_units": "usd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_global_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "REA_025",
+    "category": "realtime_price",
+    "subcategory": "Global single-stock quote",
+    "difficulty": "easy",
+    "query": "What was AMD's price in the 2024-10-30 market snapshot?",
+    "expected_answer": "158.20 USD",
+    "expected_values": [
+      158.2
+    ],
+    "expected_units": "usd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_global_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_001",
+    "category": "sector_market_overview",
+    "subcategory": "VN index summary",
+    "difficulty": "easy",
+    "query": "VN-Index trong phiên 2024-10-30 có điểm số là bao nhiêu?",
+    "expected_answer": "1262.5",
+    "expected_values": [
+      1262.5
+    ],
+    "expected_units": "points",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_market_movers"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_002",
+    "category": "sector_market_overview",
+    "subcategory": "VN index summary",
+    "difficulty": "easy",
+    "query": "VN-Index trong phiên 2024-10-30 có mức thay đổi điểm là bao nhiêu?",
+    "expected_answer": "8.2",
+    "expected_values": [
+      8.2
+    ],
+    "expected_units": "points",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_market_movers"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_003",
+    "category": "sector_market_overview",
+    "subcategory": "VN index summary",
+    "difficulty": "easy",
+    "query": "VN-Index trong phiên 2024-10-30 có mức thay đổi phần trăm là bao nhiêu?",
+    "expected_answer": "0.65",
+    "expected_values": [
+      0.65
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_market_movers"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_004",
+    "category": "sector_market_overview",
+    "subcategory": "VN index summary",
+    "difficulty": "easy",
+    "query": "Giá trị giao dịch ròng của khối ngoại trên VN-Index phiên 2024-10-30 là bao nhiêu VND?",
+    "expected_answer": "125,000,000,000 VND",
+    "expected_values": [
+      125000000000.0
+    ],
+    "expected_units": "vnd",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_market_movers"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_005",
+    "category": "sector_market_overview",
+    "subcategory": "VN index summary",
+    "difficulty": "easy",
+    "query": "Những cổ phiếu nào dẫn dắt thanh khoản VN-Index phiên 2024-10-30?",
+    "expected_answer": "Các mã dẫn dắt: HPG, FPT, MWG, VCB, VNM.",
+    "expected_values": [],
+    "expected_units": "",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_market_movers"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "SEC_006",
+    "category": "sector_market_overview",
+    "subcategory": "VN movers",
+    "difficulty": "easy",
+    "query": "HPG thay đổi bao nhiêu phần trăm trong phiên 2024-10-30?",
+    "expected_answer": "+1.13%",
+    "expected_values": [
+      1.13
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_007",
+    "category": "sector_market_overview",
+    "subcategory": "VN movers",
+    "difficulty": "easy",
+    "query": "FPT thay đổi bao nhiêu phần trăm trong phiên 2024-10-30?",
+    "expected_answer": "+1.84%",
+    "expected_values": [
+      1.84
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_008",
+    "category": "sector_market_overview",
+    "subcategory": "VN movers",
+    "difficulty": "easy",
+    "query": "MWG thay đổi bao nhiêu phần trăm trong phiên 2024-10-30?",
+    "expected_answer": "-0.61%",
+    "expected_values": [
+      -0.61
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_009",
+    "category": "sector_market_overview",
+    "subcategory": "VN movers",
+    "difficulty": "easy",
+    "query": "VCB thay đổi bao nhiêu phần trăm trong phiên 2024-10-30?",
+    "expected_answer": "+0.44%",
+    "expected_values": [
+      0.44
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_010",
+    "category": "sector_market_overview",
+    "subcategory": "VN movers",
+    "difficulty": "easy",
+    "query": "VNM thay đổi bao nhiêu phần trăm trong phiên 2024-10-30?",
+    "expected_answer": "+0.00%",
+    "expected_values": [
+      0.0
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_011",
+    "category": "sector_market_overview",
+    "subcategory": "Global tech movers",
+    "difficulty": "easy",
+    "query": "Trong nhóm AI/tech phiên 2024-10-30, mã nào tăng mạnh nhất và bao nhiêu phần trăm?",
+    "expected_answer": "NVDA +3.20%",
+    "expected_values": [
+      3.2
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_ai_tech_sector_movers"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_012",
+    "category": "sector_market_overview",
+    "subcategory": "Global tech movers",
+    "difficulty": "easy",
+    "query": "Trong nhóm AI/tech phiên 2024-10-30, mã nào giảm mạnh nhất và bao nhiêu phần trăm?",
+    "expected_answer": "MSFT +1.10%",
+    "expected_values": [
+      1.1
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_ai_tech_sector_movers"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_013",
+    "category": "sector_market_overview",
+    "subcategory": "Global tech movers",
+    "difficulty": "easy",
+    "query": "Mức thay đổi trung bình của nhóm AI/tech phiên 2024-10-30 là bao nhiêu phần trăm?",
+    "expected_answer": "+1.97%",
+    "expected_values": [
+      1.975
+    ],
+    "expected_units": "percent",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_ai_tech_sector_movers"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "SEC_014",
+    "category": "sector_market_overview",
+    "subcategory": "VN movers",
+    "difficulty": "easy",
+    "query": "Trong phiên 2024-10-30, bao nhiêu cổ phiếu trong nhóm VN30 theo dõi tăng giá?",
+    "expected_answer": "3 mã",
+    "expected_values": [
+      3.0
+    ],
+    "expected_units": "count",
+    "reporting_period": "2024-10-30",
+    "source_reference": [
+      "realtime_snapshot_20241030.json"
+    ],
+    "required_tools": [
+      "get_vietnam_stock_quote"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_001",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh tổng tài sản của VCB và HPG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "VCB: 2,657,440.57 tỷ VND; HPG: 278,929.79 tỷ VND",
+    "expected_values": [
+      2657440.57,
+      278929.79
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vcb_balance_sheet_quarterly.csv",
+      "hpg_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_002",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh lợi nhuận sau thuế của VCB và HPG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "VCB: 14,550.96 tỷ VND; HPG: 6,424.47 tỷ VND",
+    "expected_values": [
+      14550.96,
+      6424.47
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vcb_income_statement_quarterly.csv",
+      "hpg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_003",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh tổng tài sản của VNM và MWG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "VNM: 57,451.80 tỷ VND; MWG: 104,914.96 tỷ VND",
+    "expected_values": [
+      57451.8,
+      104914.96
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vnm_balance_sheet_quarterly.csv",
+      "mwg_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_004",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh lợi nhuận sau thuế của VNM và MWG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "VNM: 3,184.40 tỷ VND; MWG: 3,354.90 tỷ VND",
+    "expected_values": [
+      3184.4,
+      3354.9
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vnm_income_statement_quarterly.csv",
+      "mwg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_005",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh tổng tài sản của FPT và HPG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "FPT: 73,563.11 tỷ VND; HPG: 278,929.79 tỷ VND",
+    "expected_values": [
+      73563.11,
+      278929.79
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_balance_sheet_quarterly.csv",
+      "hpg_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_006",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh lợi nhuận sau thuế của FPT và HPG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "FPT: 2,570.34 tỷ VND; HPG: 6,424.47 tỷ VND",
+    "expected_values": [
+      2570.34,
+      6424.47
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv",
+      "hpg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_007",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh tổng tài sản của VCB và VNM trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "VCB: 2,657,440.57 tỷ VND; VNM: 57,451.80 tỷ VND",
+    "expected_values": [
+      2657440.57,
+      57451.8
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vcb_balance_sheet_quarterly.csv",
+      "vnm_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_008",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh lợi nhuận sau thuế của VCB và VNM trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "VCB: 14,550.96 tỷ VND; VNM: 3,184.40 tỷ VND",
+    "expected_values": [
+      14550.96,
+      3184.4
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vcb_income_statement_quarterly.csv",
+      "vnm_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_009",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh tổng tài sản của FPT và MWG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "FPT: 73,563.11 tỷ VND; MWG: 104,914.96 tỷ VND",
+    "expected_values": [
+      73563.11,
+      104914.96
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_balance_sheet_quarterly.csv",
+      "mwg_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_010",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh lợi nhuận sau thuế của FPT và MWG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "FPT: 2,570.34 tỷ VND; MWG: 3,354.90 tỷ VND",
+    "expected_values": [
+      2570.34,
+      3354.9
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv",
+      "mwg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_011",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh tổng tài sản của HPG và MWG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "HPG: 278,929.79 tỷ VND; MWG: 104,914.96 tỷ VND",
+    "expected_values": [
+      278929.79,
+      104914.96
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "hpg_balance_sheet_quarterly.csv",
+      "mwg_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_012",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh lợi nhuận sau thuế của HPG và MWG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "HPG: 6,424.47 tỷ VND; MWG: 3,354.90 tỷ VND",
+    "expected_values": [
+      6424.47,
+      3354.9
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "hpg_income_statement_quarterly.csv",
+      "mwg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_013",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh tổng tài sản của FPT và VCB trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "FPT: 73,563.11 tỷ VND; VCB: 2,657,440.57 tỷ VND",
+    "expected_values": [
+      73563.11,
+      2657440.57
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_balance_sheet_quarterly.csv",
+      "vcb_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_014",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh lợi nhuận sau thuế của FPT và VCB trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "FPT: 2,570.34 tỷ VND; VCB: 14,550.96 tỷ VND",
+    "expected_values": [
+      2570.34,
+      14550.96
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv",
+      "vcb_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_015",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh tổng tài sản của VNM và HPG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "VNM: 57,451.80 tỷ VND; HPG: 278,929.79 tỷ VND",
+    "expected_values": [
+      57451.8,
+      278929.79
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vnm_balance_sheet_quarterly.csv",
+      "hpg_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_016",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh lợi nhuận sau thuế của VNM và HPG trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "VNM: 3,184.40 tỷ VND; HPG: 6,424.47 tỷ VND",
+    "expected_values": [
+      3184.4,
+      6424.47
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "vnm_income_statement_quarterly.csv",
+      "hpg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_017",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh tổng tài sản của MWG và VCB trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "MWG: 104,914.96 tỷ VND; VCB: 2,657,440.57 tỷ VND",
+    "expected_values": [
+      104914.96,
+      2657440.57
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "mwg_balance_sheet_quarterly.csv",
+      "vcb_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_018",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh lợi nhuận sau thuế của MWG và VCB trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "MWG: 3,354.90 tỷ VND; VCB: 14,550.96 tỷ VND",
+    "expected_values": [
+      3354.9,
+      14550.96
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "mwg_income_statement_quarterly.csv",
+      "vcb_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_019",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh tổng tài sản của FPT và VNM trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "FPT: 73,563.11 tỷ VND; VNM: 57,451.80 tỷ VND",
+    "expected_values": [
+      73563.11,
+      57451.8
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_balance_sheet_quarterly.csv",
+      "vnm_balance_sheet_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "CRO_020",
+    "category": "cross_company_comparison",
+    "subcategory": "Peer comparison",
+    "difficulty": "medium",
+    "query": "So sánh lợi nhuận sau thuế của FPT và VNM trong Q2 2026 (đơn vị tỷ VND).",
+    "expected_answer": "FPT: 2,570.34 tỷ VND; VNM: 3,184.40 tỷ VND",
+    "expected_values": [
+      2570.34,
+      3184.4
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv",
+      "vnm_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": false
+  },
+  {
+    "query_id": "FIN_001",
+    "category": "financial_analysis_reasoning",
+    "subcategory": "Trend analysis",
+    "difficulty": "hard",
+    "query": "Phân tích xu hướng doanh thu thuần của FPT (FPT) qua 4 quý gần nhất (Q3 2025 đến Q2 2026). Nêu giá trị từng quý.",
+    "expected_answer": "Q2 2026: 13,788.50 tỷ VND; Q1 2026: 12,480.00 tỷ VND; Q4 2025: 20,225.45 tỷ VND; Q3 2025: 17,204.52 tỷ VND",
+    "expected_values": [
+      13788.5,
+      12480.0,
+      20225.45,
+      17204.52
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q3 2025 to Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "FIN_002",
+    "category": "financial_analysis_reasoning",
+    "subcategory": "Trend analysis",
+    "difficulty": "hard",
+    "query": "Phân tích xu hướng lợi nhuận sau thuế của FPT (FPT) qua 4 quý gần nhất (Q3 2025 đến Q2 2026). Nêu giá trị từng quý.",
+    "expected_answer": "Q2 2026: 2,570.34 tỷ VND; Q1 2026: 2,476.79 tỷ VND; Q4 2025: 2,994.96 tỷ VND; Q3 2025: 2,901.55 tỷ VND",
+    "expected_values": [
+      2570.34,
+      2476.79,
+      2994.96,
+      2901.55
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q3 2025 to Q2 2026",
+    "source_reference": [
+      "fpt_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "FIN_003",
+    "category": "financial_analysis_reasoning",
+    "subcategory": "Trend analysis",
+    "difficulty": "hard",
+    "query": "Phân tích xu hướng doanh thu thuần của Hòa Phát (HPG) qua 4 quý gần nhất (Q3 2025 đến Q2 2026). Nêu giá trị từng quý.",
+    "expected_answer": "Q2 2026: 55,158.90 tỷ VND; Q1 2026: 52,900.85 tỷ VND; Q4 2025: 46,176.48 tỷ VND; Q3 2025: 36,407.42 tỷ VND",
+    "expected_values": [
+      55158.9,
+      52900.85,
+      46176.48,
+      36407.42
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q3 2025 to Q2 2026",
+    "source_reference": [
+      "hpg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "FIN_004",
+    "category": "financial_analysis_reasoning",
+    "subcategory": "Trend analysis",
+    "difficulty": "hard",
+    "query": "Phân tích xu hướng lợi nhuận sau thuế của Hòa Phát (HPG) qua 4 quý gần nhất (Q3 2025 đến Q2 2026). Nêu giá trị từng quý.",
+    "expected_answer": "Q2 2026: 6,424.47 tỷ VND; Q1 2026: 9,055.92 tỷ VND; Q4 2025: 3,888.35 tỷ VND; Q3 2025: 4,012.25 tỷ VND",
+    "expected_values": [
+      6424.47,
+      9055.92,
+      3888.35,
+      4012.25
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q3 2025 to Q2 2026",
+    "source_reference": [
+      "hpg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "FIN_005",
+    "category": "financial_analysis_reasoning",
+    "subcategory": "Trend analysis",
+    "difficulty": "hard",
+    "query": "Phân tích xu hướng doanh thu thuần của Thế Giới Di Động (MWG) qua 4 quý gần nhất (Q3 2025 đến Q2 2026). Nêu giá trị từng quý.",
+    "expected_answer": "Q2 2026: 48,751.28 tỷ VND; Q1 2026: 46,461.95 tỷ VND; Q4 2025: 42,320.71 tỷ VND; Q3 2025: 39,852.51 tỷ VND",
+    "expected_values": [
+      48751.28,
+      46461.95,
+      42320.71,
+      39852.51
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q3 2025 to Q2 2026",
+    "source_reference": [
+      "mwg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "FIN_006",
+    "category": "financial_analysis_reasoning",
+    "subcategory": "Trend analysis",
+    "difficulty": "hard",
+    "query": "Phân tích xu hướng lợi nhuận sau thuế của Thế Giới Di Động (MWG) qua 4 quý gần nhất (Q3 2025 đến Q2 2026). Nêu giá trị từng quý.",
+    "expected_answer": "Q2 2026: 3,354.90 tỷ VND; Q1 2026: 2,757.56 tỷ VND; Q4 2025: 2,083.59 tỷ VND; Q3 2025: 1,783.67 tỷ VND",
+    "expected_values": [
+      3354.9,
+      2757.56,
+      2083.59,
+      1783.67
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q3 2025 to Q2 2026",
+    "source_reference": [
+      "mwg_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "FIN_007",
+    "category": "financial_analysis_reasoning",
+    "subcategory": "Trend analysis",
+    "difficulty": "hard",
+    "query": "Phân tích xu hướng thu nhập lãi thuần của Vietcombank (VCB) qua 4 quý gần nhất (Q3 2025 đến Q2 2026). Nêu giá trị từng quý.",
+    "expected_answer": "Q2 2026: 19,141.76 tỷ VND; Q1 2026: 17,651.08 tỷ VND; Q4 2025: 16,266.83 tỷ VND; Q3 2025: 14,657.24 tỷ VND",
+    "expected_values": [
+      19141.76,
+      17651.08,
+      16266.83,
+      14657.24
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q3 2025 to Q2 2026",
+    "source_reference": [
+      "vcb_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "FIN_008",
+    "category": "financial_analysis_reasoning",
+    "subcategory": "Trend analysis",
+    "difficulty": "hard",
+    "query": "Phân tích xu hướng lợi nhuận sau thuế của Vietcombank (VCB) qua 4 quý gần nhất (Q3 2025 đến Q2 2026). Nêu giá trị từng quý.",
+    "expected_answer": "Q2 2026: 14,550.96 tỷ VND; Q1 2026: 9,462.09 tỷ VND; Q4 2025: 8,633.29 tỷ VND; Q3 2025: 9,025.55 tỷ VND",
+    "expected_values": [
+      14550.96,
+      9462.09,
+      8633.29,
+      9025.55
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q3 2025 to Q2 2026",
+    "source_reference": [
+      "vcb_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "FIN_009",
+    "category": "financial_analysis_reasoning",
+    "subcategory": "Trend analysis",
+    "difficulty": "hard",
+    "query": "Phân tích xu hướng doanh thu thuần của Vinamilk (VNM) qua 4 quý gần nhất (Q3 2025 đến Q2 2026). Nêu giá trị từng quý.",
+    "expected_answer": "Q2 2026: 18,847.35 tỷ VND; Q1 2026: 16,148.66 tỷ VND; Q4 2025: 17,033.55 tỷ VND; Q3 2025: 16,953.23 tỷ VND",
+    "expected_values": [
+      18847.35,
+      16148.66,
+      17033.55,
+      16953.23
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q3 2025 to Q2 2026",
+    "source_reference": [
+      "vnm_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  },
+  {
+    "query_id": "FIN_010",
+    "category": "financial_analysis_reasoning",
+    "subcategory": "Trend analysis",
+    "difficulty": "hard",
+    "query": "Phân tích xu hướng lợi nhuận sau thuế của Vinamilk (VNM) qua 4 quý gần nhất (Q3 2025 đến Q2 2026). Nêu giá trị từng quý.",
+    "expected_answer": "Q2 2026: 3,184.40 tỷ VND; Q1 2026: 2,458.22 tỷ VND; Q4 2025: 2,827.20 tỷ VND; Q3 2025: 2,510.53 tỷ VND",
+    "expected_values": [
+      3184.4,
+      2458.22,
+      2827.2,
+      2510.53
+    ],
+    "expected_units": "billion_vnd",
+    "reporting_period": "Q3 2025 to Q2 2026",
+    "source_reference": [
+      "vnm_income_statement_quarterly.csv"
+    ],
+    "required_tools": [
+      "search_financial_reports_and_knowledge"
+    ],
+    "requires_llm_judge": true
+  }
+]
